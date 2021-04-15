@@ -12,7 +12,7 @@
     <title>Form Balasan Surat PKL</title>
 </head>
 
-<body>
+<body style="background-color: #eee;">
     <!-- Form Pendaftaran -->
     <div class="container">
         <div class="card mt-2">
@@ -58,13 +58,17 @@
                     <button type="button" class="btn btn-primary mt-2">Tambah Anggota</button>
 
                     <div class="row mt-3">
-                        <div class="col-sm-5">
+                        <div class="col-sm-3">
                             <label for="nama" class="mb-2">Nama</label>
                             <input type="text" class="form-control" id="nama" placeholder="Masukan Nama">
                         </div>
-                        <div class="col-sm-5">
+                        <div class="col-sm-3">
                             <label for="nim" class="mb-2">NIM/NIS</label>
                             <input type="text" class="form-control" id="nim" placeholder="Masukan NIM/NIS">
+                        </div>
+                        <div class="col-sm-3">
+                            <label for="nim" class="mb-2">Program Studi</label>
+                            <input type="text" class="form-control" id="nim" placeholder="Masukan Program Studi">
                         </div>
                     </div>
                 </form>
