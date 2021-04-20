@@ -35,7 +35,7 @@
                     </div>
                     <div class="form-group col-sm-5 mt-2">
                         <label for="tglSuratDibuat" class="mb-2">Tanggal Surat Dibuat</label>
-                        <input type="text" class="form-control" id="tglSuratDibuat" placeholder="Masukan Tanggal Surat Dibuat">
+                        <input type="date" class="form-control" id="tglSuratDibuat" placeholder="Masukan Tanggal Surat Dibuat">
                     </div>
                     <div class="form-group col-sm-5 mt-2">
                         <label for="tujuanPengiriman" class="mb-2">Tujuan Pengiriman Surat</label>
@@ -47,11 +47,13 @@
                     </div>
                     <div class="form-group col-sm-5 mt-2">
                         <label for="tglSuratDiterima" class="mb-2">Tanggal Surat Pemohon Diterima</label>
-                        <input type="text" class="form-control" id="tglSuratDiterima" placeholder="Masukan Tanggal Surat Pemohon Diterima">
+                        <input type="date" class="form-control" id="tglSuratDiterima" placeholder="Masukan Tanggal Surat Pemohon Diterima">
                     </div>
                     <div class="form-group col-sm-5 mt-2">
-                        <label for="masaPelaksanaan" class="mb-2">Masa Pelaksanaan Magang</label>
-                        <input type="text" class="form-control" id="masaPelaksanaan" placeholder="Masukan Masa Pelaksanaan Magang">
+                        <label for="masaPelaksanaan" class="mb-2">Tanggal Masuk Magang</label>
+                        <input type="date" class="form-control" id="masaPelaksanaan" placeholder="Masukan Masa Pelaksanaan Magang">
+                        <label for="masaPelaksanaan" class="mb-2">Tanggal Berakhir Magang</label>
+                        <input type="date" class="form-control" id="masaPelaksanaan" placeholder="Masukan Masa Pelaksanaan Magang">
                     </div>
 
                     <h4 class="mt-3">Anggota Magang</h4>
