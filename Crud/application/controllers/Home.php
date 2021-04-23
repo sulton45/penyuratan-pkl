@@ -8,7 +8,7 @@ class Home extends CI_Controller
 		parent::__construct();
 		$this->load->model('model_surat');
 		$this->load->helper(['url_helper', 'form']);
-		$this->load->library(['form_validation', 'session']);
+		$this->load->library(['form_validation', 'session', 'pdf']);
 	}
 
 	/*public function index($page = 'home_view')
@@ -165,5 +165,44 @@ class Home extends CI_Controller
 		];
 
 		$this->form_validation->set_rules($config);
+	}
+
+	public function pdf()
+	{
+		$pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
+
+
+
+		// set default header data
+		$pdf->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH);
+
+		// set default monospaced font
+
+		// set margins
+		$pdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP, PDF_MARGIN_RIGHT);
+
+		// set auto page breaks
+		$pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
+
+		// set image scale factor
+		$pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
+
+		// set some language-dependent strings (optional)
+		if (@file_exists(dirname(__FILE__) . '/lang/eng.php')) {
+			require_once(dirname(__FILE__) . '/lang/eng.php');
+			$pdf->setLanguageArray($l);
+		}
+
+		// -------------------------------------------------------------------
+
+		// add a page
+		$pdf->AddPage();
+
+
+		$pdf->Output('example_009.pdf', 'I');
+
+		//============================================================+
+		// END OF FILE
+		//============================================================+
 	}
 }

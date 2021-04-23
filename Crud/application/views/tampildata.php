@@ -70,7 +70,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
 											<td><?php echo $db->program_studi; ?></td>
 											<td>
 												<a href="<?php echo base_url('home/formedit/' . $db->id_surat); ?>"><button type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button></a>
+
 												<a href="<?php echo base_url('home/hapusdata/' . $db->id_surat); ?>" onclick="return confirm('Anda yakin hapus ?')"><button type="button" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span></button></a>
+
+												<a href="<?php echo base_url('home/pdf/' . $db->id_surat); ?>"><button type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-print" aria-hidden="true"></span></button></a>
 											</td>
 										</tr>
 									<?php
