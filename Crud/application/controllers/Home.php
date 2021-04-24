@@ -169,17 +169,31 @@ class Home extends CI_Controller
 
 	public function pdf()
 	{
-		$pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
+		// create new PDF document
+		$pdf = new MYPDF('p', 'mm', 'A4', true, 'UTF-8', false);
 
-
+		// set document information
+		$pdf->SetCreator(PDF_CREATOR);
+		$pdf->SetAuthor('Perpusnas');
+		$pdf->SetTitle('Surat Magang');
+		$pdf->SetSubject('');
+		$pdf->SetKeywords('');
 
 		// set default header data
-		$pdf->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH);
+		$pdf->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, PDF_HEADER_TITLE . ' 001', PDF_HEADER_STRING, array(0, 64, 255), array(0, 64, 128));
+		$pdf->setFooterData(array(0, 64, 0), array(0, 64, 128));
+
+		// set header and footer fonts
+		$pdf->setHeaderFont(array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
+		$pdf->setFooterFont(array(PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA));
 
 		// set default monospaced font
+		$pdf->SetDefaultMonospacedFont(PDF_FONT_MONOSPACED);
 
 		// set margins
 		$pdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP, PDF_MARGIN_RIGHT);
+		$pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
+		$pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
 
 		// set auto page breaks
 		$pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
@@ -193,16 +207,17 @@ class Home extends CI_Controller
 			$pdf->setLanguageArray($l);
 		}
 
-		// -------------------------------------------------------------------
+		// set default font subsetting mode
+		$pdf->setFontSubsetting(true);
 
-		// add a page
-		$pdf->AddPage();
+		// Set font
+		// dejavusans is a UTF-8 Unicode font, if you only need to
+		// print standard ASCII chars, you can use core fonts like
+		// helvetica or times to reduce file size.
+		$pdf->SetFont('dejavusans', '', 14, '', true);
 
-
-		$pdf->Output('example_009.pdf', 'I');
-
-		//============================================================+
-		// END OF FILE
-		//============================================================+
+		// Close and output PDF document
+		// This method has several options, check the source code documentation for more information.
+		$pdf->Output('jawaban_surat_magang.pdf', 'I');
 	}
 }
