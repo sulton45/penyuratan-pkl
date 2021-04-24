@@ -42,11 +42,36 @@ class MYPDF extends TCPDF
     public function Footer()
     {
         // Position at 15 mm from bottom
-        $this->SetY(-15);
+        $this->SetY(-128);
+        $this->Ln(5);
         // Set font
-        $this->SetFont('helvetica', 'I', 8);
-        // Page number
-        $this->Cell(0, 10, 'Page ' . $this->getAliasNumPage() . '/' . $this->getAliasNbPages(), 0, false, 'C', 0, '', 0, false, 'T', 'M');
+        $this->SetFont('times', ' ', 11);
+
+        $this->Cell(15, 1, '', 0, 0);
+        $this->MultiCell(174, 15, 'Demikian kami sampaikan, atas kerjasamanya kami ucapkan terimakasih', 0, 'L', 0, 1, '', '', true);
+        $this->Ln(1);
+        $this->Cell(94, 1, '', 0, 0);
+        $this->Cell(95, 1, 'Plt. Kepala Pusat Pendidikan dan Pelatiahan', 0, 1);
+        $this->Cell(94, 1, '', 0, 0);
+        $this->Cell(95, 1, 'Perpustakaan Nasional RI,', 0, 1);
+        $this->Ln(20);
+        $this->Cell(94, 1, '', 0, 0);
+        $this->Cell(95, 1, 'Drs. Y. Yahyono, S.IP., M.Si', 0, 1);
+        $this->Cell(94, 1, '', 0, 0);
+        $this->Cell(95, 1, 'NIP. 19631110 199103 1 001', 0, 1);
+        $this->Ln(5);
+        $this->Cell(189, 1, 'Tembusan :', 0, 1);
+        $this->Cell(189, 1, '1. Kepala Perpustakaan Nasional RI', 0, 1);
+        $this->Cell(189, 1, '2. Sekretaris Utama Perpustakaan Nasional RI', 0, 1);
+        $this->Ln(30);
+
+
+
+        // Set font
+        $this->SetFont('times', 'B', 8);
+        $this->Cell(189, 1, 'Alamat. Jl. Salemba Raya No. 28A, Jakarta Pusat, Indonesia - 10430', 0, 1, 'C');
+        $this->Cell(189, 1, 'Telepon.(62-21) 3922749, 3154864, 3101411 Fakslmlle.(62-21) 3101472', 0, 1, 'C');
+        $this->Cell(189, 1, 'Website. www.perpusnas.go.id Email. info@perpusnas.go.id', 0, 1, 'C');
     }
 }
 
@@ -99,4 +124,4 @@ $pdf->SetFont('dejavusans', '', 14, '', true);
 
 // Close and output PDF document
 // This method has several options, check the source code documentation for more information.
-$pdf->Output('example_001.pdf', 'I');
+$pdf->Output('jawaban_surat_magang.pdf', 'I');
