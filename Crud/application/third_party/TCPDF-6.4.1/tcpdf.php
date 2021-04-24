@@ -25157,6 +25157,11 @@ class MYPDF extends TCPDF
 
 
 		// Set font
+		$tabel = '
+        <table border="5">
+        </table>
+        ';
+		$this->writeHTML($tabel);
 		$this->SetFont('times', 'B', 8);
 		$this->Cell(189, 1, 'Alamat. Jl. Salemba Raya No. 28A, Jakarta Pusat, Indonesia - 10430', 0, 1, 'C');
 		$this->Cell(189, 1, 'Telepon.(62-21) 3922749, 3154864, 3101411 Fakslmlle.(62-21) 3101472', 0, 1, 'C');

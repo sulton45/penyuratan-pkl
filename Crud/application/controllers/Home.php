@@ -167,7 +167,7 @@ class Home extends CI_Controller
 		$this->form_validation->set_rules($config);
 	}
 
-	public function pdf()
+	public function pdf($id)
 	{
 		// create new PDF document
 		$pdf = new MYPDF('p', 'mm', 'A4', true, 'UTF-8', false);
