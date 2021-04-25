@@ -39,6 +39,12 @@ class model_surat extends CI_Model
 		return $query->row();
 	}
 
+	public function pilih_data($id)
+	{
+		$query = $this->db->get_where('surat', ['id_surat' => $id]);
+		return $query->row();
+	}
+
 	public function update_surat()
 	{
 		$kondisi = ['id_surat' => $this->input->post('id_surat')];
