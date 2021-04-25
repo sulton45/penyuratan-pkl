@@ -175,11 +175,6 @@ class Home extends CI_Controller
 		$pdf = new MYPDF('p', 'mm', 'A4', true, 'UTF-8', false);
 		$data['db'] = $this->model_surat->pilih_data($id);
 
-		$pdf->AddPage();
-		foreach ($data as $data_surat) {
-			$pdf->Cell(100, 100, "Nyoba Manggil Database " . $data_surat->nama, 0, 1, 'C');
-		}
-
 
 		// Close and output PDF document
 		// This method has several options, check the source code documentation for more information.

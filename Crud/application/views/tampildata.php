@@ -40,7 +40,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 										<th>Lampiran</th>
 										<th>Hal Surat</th>
 										<th>Tgl Surat Dibuat</th>
-										<th>Tujuan Surat</th>
+										<th>Kepada</th>
+										<th>Institusi</th>
+										<th>Tujuan Daerah</th>
 										<th>No Surat Pemohon</th>
 										<th>Tgl Surat Pemohon</th>
 										<th>Masa Pelaksanaan Magang</th>
@@ -61,7 +63,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 											<td><?php echo $db->lampiran; ?></td>
 											<td><?php echo $db->hal_surat; ?></td>
 											<td><?php echo $db->tglsurat_dibuat; ?></td>
-											<td><?php echo $db->tujuan_surat; ?></td>
+											<td><?php echo $db->kepada_surat; ?></td>
+											<td><?php echo $db->institusi_surat; ?></td>
+											<td><?php echo $db->daerah_surat; ?></td>
 											<td><?php echo $db->no_surat_pemohon; ?></td>
 											<td><?php echo $db->tglsurat_pemohon; ?></td>
 											<td><?php echo $db->masa_magang; ?></td>

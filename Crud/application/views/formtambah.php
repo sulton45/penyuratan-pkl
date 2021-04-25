@@ -62,10 +62,26 @@ defined('BASEPATH') or exit('Akses langsung tidak diperbolehkan');
 						</div>
 
 						<div class="form-group">
-							<label for="tujuan_surat" class="control-label col-sm-2">Tujuan Surat </label>
+							<label for="kepada_surat" class="control-label col-sm-2"> Kepada </label>
 							<div class="col-sm-10">
-								<input type="text" class="form-control" name="tujuan_surat" value="<?php echo set_value('tujuan_surat'); ?>">
-								<?php echo form_error('tujuan_surat'); ?>
+								<input type="text" class="form-control" name="kepada_surat" value="<?php echo set_value('kepada_surat'); ?>">
+								<?php echo form_error('kepada_surat'); ?>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="institusi_surat" class="control-label col-sm-2">Institusi </label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" name="institusi_surat" value="<?php echo set_value('institusi_surat'); ?>">
+								<?php echo form_error('institusi_surat'); ?>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="daerah_surat" class="control-label col-sm-2">Tujuan Daerah </label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" name="daerah_surat" value="<?php echo set_value('daerah_surat'); ?>">
+								<?php echo form_error('daerah_surat'); ?>
 							</div>
 						</div>
 
