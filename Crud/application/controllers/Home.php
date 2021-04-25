@@ -128,7 +128,17 @@ class Home extends CI_Controller
 				'rules' => 'required'
 			],
 			[
-				'field' => 'tujuan_surat',
+				'field' => 'kepada_surat',
+				'label' => 'Tujuan Surat Tidak Boleh Kosong',
+				'rules' => 'required'
+			],
+			[
+				'field' => 'institusi_surat',
+				'label' => 'Tujuan Surat Tidak Boleh Kosong',
+				'rules' => 'required'
+			],
+			[
+				'field' => 'daerah_surat',
 				'label' => 'Tujuan Surat Tidak Boleh Kosong',
 				'rules' => 'required'
 			],
@@ -175,9 +185,64 @@ class Home extends CI_Controller
 		$pdf = new MYPDF('p', 'mm', 'A4', true, 'UTF-8', false);
 		$data['db'] = $this->model_surat->pilih_data($id);
 
+		$pdf->AddPage();
+		foreach ($data as $data_surat) {
+			$pdf->Ln(38);
+			$pdf->SetFont('times', '', 11);
+			$pdf->Cell(155, 1, "Nomor     : " . $data_surat->no_surat, 0, 0,);
+			$pdf->Cell(34, 1, $data_surat->tglsurat_dibuat, 0, 1,);
+			$pdf->Cell(189, 1, "Lampiran : " . $data_surat->lampiran, 0, 1,);
+			$pdf->Cell(189, 1, "Hal           : " . $data_surat->hal_surat, 0, 1,);
+
+			$pdf->Ln(10);
+			$pdf->Cell(189, 1, "Kepada", 0, 1,);
+			$pdf->Cell(189, 1, "Yth.          : " . $data_surat->kepada_surat, 0, 1,);
+			$pdf->Cell(19, 1, "", 0, 0,);
+			$pdf->Cell(170, 1, "" . $data_surat->institusi_surat, 0, 1,);
+			$pdf->Cell(19, 1, "", 0, 0,);
+			$pdf->Cell(170, 1, "" . $data_surat->daerah_surat, 0, 1,);
+
+			$pdf->Ln(10);
+			$pdf->Cell(19, 1, "", 0, 0,);
+			$pdf->Cell(170, 1, "Dengan Hormat,", 0, 1,);
+
+			$pdf->Ln(5);
+			// MultiCell($w, $h, $txt, $border=0, $align='J', $fill=0, $ln=1, $x='', $y='', $reseth=true, $stretch=0, $ishtml=false, $autopadding=true, $maxh=0)
+			$pdf->MultiCell(19, 1, "", 0, 'J', 0, 0, '', '', true, 0, false, true, 40);
+			$pdf->MultiCell(160, 1, "Menindaklanjuti Surat Saudara Nomor " . $data_surat->no_surat_pemohon . " tanggal " . $data_surat->tglsurat_pemohon . " dengan ini disampaikan bahwa kami bersedia menerima mahasiswa Saudara yaitu:", 0, 'L', 0, 0, '', '', true, 0, false, true, 40);
+			$pdf->MultiCell(10, 1, "", 0, 'J', 0, 0, '', '', true, 0, false, true, 40);
+
+			$pdf->Ln(15);
+			$pdf->SetFont('', 'B', 12);
+			$pdf->Cell(22, 8, "", 0, 0, 'C');
+			$pdf->Cell(50, 8, "Nama", 1, 0, 'C');
+			$pdf->Cell(50, 8, "NIM", 1, 0, 'C');
+			$pdf->Cell(50, 8, "Program Studi", 1, 0, 'C');
+			$pdf->Cell(17, 8, "", 0, 1, 'C');
+
+			$pdf->SetFont('times', ' ', 11);
+			$pdf->Cell(22, 8, "", 0, 0, 'C');
+			$pdf->Cell(50, 8, $data_surat->nama, 1, 0, 'C');
+			$pdf->Cell(50, 8, $data_surat->nim, 1, 0, 'C');
+			$pdf->Cell(50, 8, $data_surat->program_studi, 1, 0, 'C');
+			$pdf->Cell(17, 8, "", 0, 1, 'C');
+			if ($data_surat->nama2 == '') {
+			} else {
+				$pdf->Cell(50, 8, $data_surat->program_studi, 1, 0, 'C');
+			}
+
+			$pdf->Ln(15);
+			$pdf->MultiCell(19, 1, "", 0, 'J', 0, 0, '', '', true, 0, false, true, 40);
+			$pdf->MultiCell(160, 1, "Untuk melakukan program magang di Pusat Pendidikan dan Pelatihan, Perpustakaan Nasional RI, yang dilaksanakan dengan memperhatikan protokol kesehatan yang berlaku. Pelaksanaan program magang berlangsung sejak " . $data_surat->masa_magang . ".", 0, 'L', 0, 0, '', '', true, 0, false, true, 40);
+			$pdf->MultiCell(10, 1, "", 0, 'J', 0, 0, '', '', true, 0, false, true, 40);
+
+
+			$pdf->Output('jawaban_surat_magang_' . $data_surat->nama . '.pdf', 'I');
+		}
+
 
 		// Close and output PDF document
 		// This method has several options, check the source code documentation for more information.
-		$pdf->Output('jawaban_surat_magang.pdf', 'I');
+
 	}
 }
