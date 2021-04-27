@@ -129,17 +129,17 @@ class Home extends CI_Controller
 			],
 			[
 				'field' => 'kepada_surat',
-				'label' => 'Tujuan Surat Tidak Boleh Kosong',
+				'label' => 'Kepada Tujuan Surat Tidak Boleh Kosong',
 				'rules' => 'required'
 			],
 			[
 				'field' => 'institusi_surat',
-				'label' => 'Tujuan Surat Tidak Boleh Kosong',
+				'label' => 'Institusi Tujuan Surat Tidak Boleh Kosong',
 				'rules' => 'required'
 			],
 			[
 				'field' => 'daerah_surat',
-				'label' => 'Tujuan Surat Tidak Boleh Kosong',
+				'label' => 'Daerah Tujuan Surat Tidak Boleh Kosong',
 				'rules' => 'required'
 			],
 			[
