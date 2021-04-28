@@ -230,50 +230,25 @@ class Home extends CI_Controller
 			$pdf->MultiCell(50, 10, $data_surat->program_studi, 1, 'C', 0, 0, '', '', true, 0, false, true, 10, 'M');
 			$pdf->MultiCell(17, 10, "", 0, 'C', 0, 1, '', '', true, 0, false, true, 10);
 
-			$pdf->SetFont('times', ' ', 11);
-			$pdf->MultiCell(22, 10, "", 0, 'C', 0, 0, '', '', true, 0, false, true, 10);
-			$pdf->MultiCell(50, 10, $data_surat->nama, 1, 'C', 0, 0, '', '', true, 0, false, true, 10, 'M');
-			$pdf->MultiCell(50, 10, $data_surat->nim, 1, 'C', 0, 0, '', '', true, 0, false, true, 10, 'M');
-			$pdf->MultiCell(50, 10, $data_surat->program_studi, 1, 'C', 0, 0, '', '', true, 0, false, true, 10, 'M');
-			$pdf->MultiCell(17, 10, "", 0, 'C', 0, 1, '', '', true, 0, false, true, 10);
-
-			$pdf->SetFont('times', ' ', 11);
-			$pdf->MultiCell(22, 10, "", 0, 'C', 0, 0, '', '', true, 0, false, true, 10);
-			$pdf->MultiCell(50, 10, $data_surat->nama, 1, 'C', 0, 0, '', '', true, 0, false, true, 10, 'M');
-			$pdf->MultiCell(50, 10, $data_surat->nim, 1, 'C', 0, 0, '', '', true, 0, false, true, 10, 'M');
-			$pdf->MultiCell(50, 10, $data_surat->program_studi, 1, 'C', 0, 0, '', '', true, 0, false, true, 10, 'M');
-			$pdf->MultiCell(17, 10, "", 0, 'C', 0, 1, '', '', true, 0, false, true, 10);
-
-			$pdf->SetFont('times', ' ', 11);
-			$pdf->MultiCell(22, 10, "", 0, 'C', 0, 0, '', '', true, 0, false, true, 10);
-			$pdf->MultiCell(50, 10, $data_surat->nama, 1, 'C', 0, 0, '', '', true, 0, false, true, 10, 'M');
-			$pdf->MultiCell(50, 10, $data_surat->nim, 1, 'C', 0, 0, '', '', true, 0, false, true, 10, 'M');
-			$pdf->MultiCell(50, 10, $data_surat->program_studi, 1, 'C', 0, 0, '', '', true, 0, false, true, 10, 'M');
-			$pdf->MultiCell(17, 10, "", 0, 'C', 0, 1, '', '', true, 0, false, true, 10);
-
-			$pdf->SetFont('times', ' ', 11);
-			$pdf->MultiCell(22, 10, "", 0, 'C', 0, 0, '', '', true, 0, false, true, 10);
-			$pdf->MultiCell(50, 10, $data_surat->nama, 1, 'C', 0, 0, '', '', true, 0, false, true, 10, 'M');
-			$pdf->MultiCell(50, 10, $data_surat->nim, 1, 'C', 0, 0, '', '', true, 0, false, true, 10, 'M');
-			$pdf->MultiCell(50, 10, $data_surat->program_studi, 1, 'C', 0, 0, '', '', true, 0, false, true, 10, 'M');
-			$pdf->MultiCell(17, 10, "", 0, 'C', 0, 1, '', '', true, 0, false, true, 10);
-
-
 			if ($data_surat->nama2 == '') {
 			} else {
-				$pdf->Cell(50, 8, $data_surat->program_studi, 1, 0, 'C');
+				$pdf->MultiCell(22, 10, "", 0, 'C', 0, 0, '', '', true, 0, false, true, 10);
+				$pdf->MultiCell(50, 10, $data_surat->nama2, 1, 'C', 0, 0, '', '', true, 0, false, true, 10, 'M');
+				$pdf->MultiCell(50, 10, $data_surat->nim2, 1, 'C', 0, 0, '', '', true, 0, false, true, 10, 'M');
+				$pdf->MultiCell(50, 10, $data_surat->program_studi2, 1, 'C', 0, 0, '', '', true, 0, false, true, 10, 'M');
+				$pdf->MultiCell(17, 10, "", 0, 'C', 0, 1, '', '', true, 0, false, true, 10);
 			}
 
-			$pdf->Ln(7);
+			$pdf->Ln(3);
 			$pdf->MultiCell(19, 1, "", 0, 'J', 0, 0, '', '', true, 0, false, true, 40);
 			$pdf->MultiCell(160, 1, "Untuk melakukan program magang di Pusat Pendidikan dan Pelatihan, Perpustakaan Nasional RI, yang dilaksanakan dengan memperhatikan protokol kesehatan yang berlaku. Pelaksanaan program magang berlangsung sejak " . $data_surat->masa_magang . ".", 0, 'L', 0, 0, '', '', true, 0, false, true, 40);
 			$pdf->MultiCell(10, 1, "", 0, 'J', 0, 1, '', '', true, 0, false, true, 40);
 
-			$pdf->Ln(15);
+			$pdf->Ln(13);
 			$pdf->MultiCell(19, 1, "", 0, 'J', 0, 0, '', '', true, 0, false, true, 40);
 			$pdf->MultiCell(170, 1, "Demikian kami sampaikan, atas kerjasamanya kami ucapkan terimakasih", 0, 'L', 0, 1, '', '', true);
 
-			$pdf->Ln(10);
+			$pdf->Ln(7);
 			$pdf->Cell(94, 1, '', 0, 0);
 			$pdf->Cell(95, 1, 'Plt. Kepala Pusat Pendidikan dan Pelatiahan', 0, 1);
 			$pdf->Cell(94, 1, '', 0, 0);
