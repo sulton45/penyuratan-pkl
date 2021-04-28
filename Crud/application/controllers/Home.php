@@ -187,6 +187,8 @@ class Home extends CI_Controller
 
 		$pdf->AddPage();
 		foreach ($data as $data_surat) {
+			$image_file = K_PATH_IMAGES . 'logo_perpusnas.png';
+			$pdf->Image($image_file, 87, 2, 35, '', 'PNG', '', 'T', false, 300, '', false, false, 0, false, false, false);
 			$pdf->Ln(37);
 			$pdf->SetFont('times', '', 11);
 			//Cell($w, $h=0, $txt='', $border=0, $ln=0, $align='', $fill=0, $link='', $stretch=0, $ignore_min_height=false, $calign='T', $valign='M')
@@ -227,6 +229,35 @@ class Home extends CI_Controller
 			$pdf->MultiCell(50, 10, $data_surat->nim, 1, 'C', 0, 0, '', '', true, 0, false, true, 10, 'M');
 			$pdf->MultiCell(50, 10, $data_surat->program_studi, 1, 'C', 0, 0, '', '', true, 0, false, true, 10, 'M');
 			$pdf->MultiCell(17, 10, "", 0, 'C', 0, 1, '', '', true, 0, false, true, 10);
+
+			$pdf->SetFont('times', ' ', 11);
+			$pdf->MultiCell(22, 10, "", 0, 'C', 0, 0, '', '', true, 0, false, true, 10);
+			$pdf->MultiCell(50, 10, $data_surat->nama, 1, 'C', 0, 0, '', '', true, 0, false, true, 10, 'M');
+			$pdf->MultiCell(50, 10, $data_surat->nim, 1, 'C', 0, 0, '', '', true, 0, false, true, 10, 'M');
+			$pdf->MultiCell(50, 10, $data_surat->program_studi, 1, 'C', 0, 0, '', '', true, 0, false, true, 10, 'M');
+			$pdf->MultiCell(17, 10, "", 0, 'C', 0, 1, '', '', true, 0, false, true, 10);
+
+			$pdf->SetFont('times', ' ', 11);
+			$pdf->MultiCell(22, 10, "", 0, 'C', 0, 0, '', '', true, 0, false, true, 10);
+			$pdf->MultiCell(50, 10, $data_surat->nama, 1, 'C', 0, 0, '', '', true, 0, false, true, 10, 'M');
+			$pdf->MultiCell(50, 10, $data_surat->nim, 1, 'C', 0, 0, '', '', true, 0, false, true, 10, 'M');
+			$pdf->MultiCell(50, 10, $data_surat->program_studi, 1, 'C', 0, 0, '', '', true, 0, false, true, 10, 'M');
+			$pdf->MultiCell(17, 10, "", 0, 'C', 0, 1, '', '', true, 0, false, true, 10);
+
+			$pdf->SetFont('times', ' ', 11);
+			$pdf->MultiCell(22, 10, "", 0, 'C', 0, 0, '', '', true, 0, false, true, 10);
+			$pdf->MultiCell(50, 10, $data_surat->nama, 1, 'C', 0, 0, '', '', true, 0, false, true, 10, 'M');
+			$pdf->MultiCell(50, 10, $data_surat->nim, 1, 'C', 0, 0, '', '', true, 0, false, true, 10, 'M');
+			$pdf->MultiCell(50, 10, $data_surat->program_studi, 1, 'C', 0, 0, '', '', true, 0, false, true, 10, 'M');
+			$pdf->MultiCell(17, 10, "", 0, 'C', 0, 1, '', '', true, 0, false, true, 10);
+
+			$pdf->SetFont('times', ' ', 11);
+			$pdf->MultiCell(22, 10, "", 0, 'C', 0, 0, '', '', true, 0, false, true, 10);
+			$pdf->MultiCell(50, 10, $data_surat->nama, 1, 'C', 0, 0, '', '', true, 0, false, true, 10, 'M');
+			$pdf->MultiCell(50, 10, $data_surat->nim, 1, 'C', 0, 0, '', '', true, 0, false, true, 10, 'M');
+			$pdf->MultiCell(50, 10, $data_surat->program_studi, 1, 'C', 0, 0, '', '', true, 0, false, true, 10, 'M');
+			$pdf->MultiCell(17, 10, "", 0, 'C', 0, 1, '', '', true, 0, false, true, 10);
+
 
 			if ($data_surat->nama2 == '') {
 			} else {

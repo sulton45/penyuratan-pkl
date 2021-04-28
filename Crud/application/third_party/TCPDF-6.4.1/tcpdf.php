@@ -25123,8 +25123,7 @@ class MYPDF extends TCPDF
 	public function Header()
 	{
 		// Logo
-		$image_file = K_PATH_IMAGES . 'logo_perpusnas.png';
-		$this->Image($image_file, 84, 2, 45, '', 'PNG', '', 'T', false, 300, '', false, false, 0, false, false, false);
+
 	}
 
 	// Page footer
