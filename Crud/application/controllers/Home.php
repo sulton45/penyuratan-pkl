@@ -187,14 +187,15 @@ class Home extends CI_Controller
 
 		$pdf->AddPage();
 		foreach ($data as $data_surat) {
-			$pdf->Ln(38);
+			$pdf->Ln(37);
 			$pdf->SetFont('times', '', 11);
+			//Cell($w, $h=0, $txt='', $border=0, $ln=0, $align='', $fill=0, $link='', $stretch=0, $ignore_min_height=false, $calign='T', $valign='M')
 			$pdf->Cell(155, 1, "Nomor     : " . $data_surat->no_surat, 0, 0,);
 			$pdf->Cell(34, 1, $data_surat->tglsurat_dibuat, 0, 1,);
 			$pdf->Cell(189, 1, "Lampiran : " . $data_surat->lampiran, 0, 1,);
 			$pdf->Cell(189, 1, "Hal           : " . $data_surat->hal_surat, 0, 1,);
 
-			$pdf->Ln(10);
+			$pdf->Ln(7);
 			$pdf->Cell(189, 1, "Kepada", 0, 1,);
 			$pdf->Cell(189, 1, "Yth.          : " . $data_surat->kepada_surat, 0, 1,);
 			$pdf->Cell(19, 1, "", 0, 0,);
@@ -202,7 +203,7 @@ class Home extends CI_Controller
 			$pdf->Cell(19, 1, "", 0, 0,);
 			$pdf->Cell(170, 1, "" . $data_surat->daerah_surat, 0, 1,);
 
-			$pdf->Ln(10);
+			$pdf->Ln(7);
 			$pdf->Cell(19, 1, "", 0, 0,);
 			$pdf->Cell(170, 1, "Dengan Hormat,", 0, 1,);
 
@@ -210,31 +211,52 @@ class Home extends CI_Controller
 			// MultiCell($w, $h, $txt, $border=0, $align='J', $fill=0, $ln=1, $x='', $y='', $reseth=true, $stretch=0, $ishtml=false, $autopadding=true, $maxh=0)
 			$pdf->MultiCell(19, 1, "", 0, 'J', 0, 0, '', '', true, 0, false, true, 40);
 			$pdf->MultiCell(160, 1, "Menindaklanjuti Surat Saudara Nomor " . $data_surat->no_surat_pemohon . " tanggal " . $data_surat->tglsurat_pemohon . " dengan ini disampaikan bahwa kami bersedia menerima mahasiswa Saudara yaitu:", 0, 'L', 0, 0, '', '', true, 0, false, true, 40);
-			$pdf->MultiCell(10, 1, "", 0, 'J', 0, 0, '', '', true, 0, false, true, 40);
+			$pdf->MultiCell(10, 1, "", 0, 'J', 0, 1, '', '', true, 0, false, true, 40);
 
-			$pdf->Ln(15);
+			$pdf->Ln(7);
 			$pdf->SetFont('', 'B', 12);
-			$pdf->Cell(22, 8, "", 0, 0, 'C');
-			$pdf->Cell(50, 8, "Nama", 1, 0, 'C');
-			$pdf->Cell(50, 8, "NIM", 1, 0, 'C');
-			$pdf->Cell(50, 8, "Program Studi", 1, 0, 'C');
-			$pdf->Cell(17, 8, "", 0, 1, 'C');
+			$pdf->Cell(22, 10, "", 0, 0, 'C');
+			$pdf->Cell(50, 10, "Nama", 1, 0, 'C');
+			$pdf->Cell(50, 10, "NIM", 1, 0, 'C');
+			$pdf->Cell(50, 10, "Program Studi", 1, 0, 'C');
+			$pdf->Cell(17, 10, "", 0, 1, 'C');
 
 			$pdf->SetFont('times', ' ', 11);
-			$pdf->Cell(22, 8, "", 0, 0, 'C');
-			$pdf->Cell(50, 8, $data_surat->nama, 1, 0, 'C');
-			$pdf->Cell(50, 8, $data_surat->nim, 1, 0, 'C');
-			$pdf->Cell(50, 8, $data_surat->program_studi, 1, 0, 'C');
-			$pdf->Cell(17, 8, "", 0, 1, 'C');
+			$pdf->MultiCell(22, 10, "", 0, 'C', 0, 0, '', '', true, 0, false, true, 10);
+			$pdf->MultiCell(50, 10, $data_surat->nama, 1, 'C', 0, 0, '', '', true, 0, false, true, 10, 'M');
+			$pdf->MultiCell(50, 10, $data_surat->nim, 1, 'C', 0, 0, '', '', true, 0, false, true, 10, 'M');
+			$pdf->MultiCell(50, 10, $data_surat->program_studi, 1, 'C', 0, 0, '', '', true, 0, false, true, 10, 'M');
+			$pdf->MultiCell(17, 10, "", 0, 'C', 0, 1, '', '', true, 0, false, true, 10);
+
 			if ($data_surat->nama2 == '') {
 			} else {
 				$pdf->Cell(50, 8, $data_surat->program_studi, 1, 0, 'C');
 			}
 
-			$pdf->Ln(15);
+			$pdf->Ln(7);
 			$pdf->MultiCell(19, 1, "", 0, 'J', 0, 0, '', '', true, 0, false, true, 40);
 			$pdf->MultiCell(160, 1, "Untuk melakukan program magang di Pusat Pendidikan dan Pelatihan, Perpustakaan Nasional RI, yang dilaksanakan dengan memperhatikan protokol kesehatan yang berlaku. Pelaksanaan program magang berlangsung sejak " . $data_surat->masa_magang . ".", 0, 'L', 0, 0, '', '', true, 0, false, true, 40);
-			$pdf->MultiCell(10, 1, "", 0, 'J', 0, 0, '', '', true, 0, false, true, 40);
+			$pdf->MultiCell(10, 1, "", 0, 'J', 0, 1, '', '', true, 0, false, true, 40);
+
+			$pdf->Ln(15);
+			$pdf->MultiCell(19, 1, "", 0, 'J', 0, 0, '', '', true, 0, false, true, 40);
+			$pdf->MultiCell(170, 1, "Demikian kami sampaikan, atas kerjasamanya kami ucapkan terimakasih", 0, 'L', 0, 1, '', '', true);
+
+			$pdf->Ln(10);
+			$pdf->Cell(94, 1, '', 0, 0);
+			$pdf->Cell(95, 1, 'Plt. Kepala Pusat Pendidikan dan Pelatiahan', 0, 1);
+			$pdf->Cell(94, 1, '', 0, 0);
+			$pdf->Cell(95, 1, 'Perpustakaan Nasional RI,', 0, 1);
+			$pdf->Ln(20);
+			$pdf->Cell(94, 1, '', 0, 0);
+			$pdf->Cell(95, 1, 'Drs. Y. Yahyono, S.IP., M.Si', 0, 1);
+			$pdf->Cell(94, 1, '', 0, 0);
+			$pdf->Cell(95, 1, 'NIP. 19631110 199103 1 001', 0, 1);
+
+			$pdf->Ln(7);
+			$pdf->Cell(189, 1, 'Tembusan :', 0, 1);
+			$pdf->Cell(189, 1, '1. Kepala Perpustakaan Nasional RI', 0, 1);
+			$pdf->Cell(189, 1, '2. Sekretaris Utama Perpustakaan Nasional RI', 0, 1);
 
 
 			$pdf->Output('jawaban_surat_magang_' . $data_surat->nama . '.pdf', 'I');

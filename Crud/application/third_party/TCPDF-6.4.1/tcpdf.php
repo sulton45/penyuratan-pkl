@@ -25131,31 +25131,7 @@ class MYPDF extends TCPDF
 	public function Footer()
 	{
 		// Position at 15 mm from bottom
-		$this->SetY(-125);
-		$this->Ln(5);
-		// Set font
-		$this->SetFont('times', ' ', 11);
-
-		$this->Cell(20, 1, '', 0, 0);
-		$this->MultiCell(169, 15, 'Demikian kami sampaikan, atas kerjasamanya kami ucapkan terimakasih', 0, 'L', 0, 1, '', '', true);
-		$this->Ln(1);
-		$this->Cell(94, 1, '', 0, 0);
-		$this->Cell(95, 1, 'Plt. Kepala Pusat Pendidikan dan Pelatiahan', 0, 1);
-		$this->Cell(94, 1, '', 0, 0);
-		$this->Cell(95, 1, 'Perpustakaan Nasional RI,', 0, 1);
-		$this->Ln(20);
-		$this->Cell(94, 1, '', 0, 0);
-		$this->Cell(95, 1, 'Drs. Y. Yahyono, S.IP., M.Si', 0, 1);
-		$this->Cell(94, 1, '', 0, 0);
-		$this->Cell(95, 1, 'NIP. 19631110 199103 1 001', 0, 1);
-		$this->Ln(5);
-		$this->Cell(189, 1, 'Tembusan :', 0, 1);
-		$this->Cell(189, 1, '1. Kepala Perpustakaan Nasional RI', 0, 1);
-		$this->Cell(189, 1, '2. Sekretaris Utama Perpustakaan Nasional RI', 0, 1);
-		$this->Ln(25);
-
-
-
+		$this->SetY(-20);
 		// Set font
 		$tabel = '
         <table border="5">
