@@ -129,122 +129,122 @@ defined('BASEPATH') or exit('Akses langsung tidak diperbolehkan');
 						</div>
 
 						<div class="form-group">
-							<label for="nama" class="control-label col-sm-2">Nama </label>
+							<label for="nama2" class="control-label col-sm-2">Nama </label>
 							<div class="col-sm-10">
-								<input type="text" class="form-control" name="nama" value="<?php echo set_value('nama', $db->nama2); ?>">
-								<?php echo form_error('nama'); ?>
+								<input type="text" class="form-control" name="nama2" value="<?php echo set_value('nama', $db->nama2); ?>">
+
 							</div>
 						</div>
 
 						<div class="form-group">
-							<label for="nim" class="control-label col-sm-2">NIM/NIS </label>
+							<label for="nim2" class="control-label col-sm-2">NIM/NIS </label>
 							<div class="col-sm-10">
-								<input type="text" class="form-control" name="nim" value="<?php echo set_value('nim', $db->nim2); ?>">
-								<?php echo form_error('nim'); ?>
+								<input type="text" class="form-control" name="nim2" value="<?php echo set_value('nim', $db->nim2); ?>">
+
 							</div>
 						</div>
 
 						<div class="form-group">
-							<label for="program_studi" class="control-label col-sm-2">Program Studi </label>
+							<label for="program_studi2" class="control-label col-sm-2">Program Studi </label>
 							<div class="col-sm-10">
-								<input type="text" class="form-control" name="program_studi" value="<?php echo set_value('program_studi', $db->program_studi2); ?>">
-								<?php echo form_error('program_studi'); ?>
+								<input type="text" class="form-control" name="program_studi2" value="<?php echo set_value('program_studi', $db->program_studi2); ?>">
+
 							</div>
 						</div>
 
 						<div class="form-group">
-							<label for="nama" class="control-label col-sm-2">Nama </label>
+							<label for="nama3" class="control-label col-sm-2">Nama </label>
 							<div class="col-sm-10">
-								<input type="text" class="form-control" name="nama" value="<?php echo set_value('nama', $db->nama3); ?>">
-								<?php echo form_error('nama'); ?>
+								<input type="text" class="form-control" name="nama3" value="<?php echo set_value('nama', $db->nama3); ?>">
+
 							</div>
 						</div>
 
 						<div class="form-group">
-							<label for="nim" class="control-label col-sm-2">NIM/NIS </label>
+							<label for="nim3" class="control-label col-sm-2">NIM/NIS </label>
 							<div class="col-sm-10">
-								<input type="text" class="form-control" name="nim" value="<?php echo set_value('nim', $db->nim3); ?>">
-								<?php echo form_error('nim'); ?>
+								<input type="text" class="form-control" name="nim3" value="<?php echo set_value('nim', $db->nim3); ?>">
+
 							</div>
 						</div>
 
 						<div class="form-group">
-							<label for="program_studi" class="control-label col-sm-2">Program Studi </label>
+							<label for="program_studi3" class="control-label col-sm-2">Program Studi </label>
 							<div class="col-sm-10">
-								<input type="text" class="form-control" name="program_studi" value="<?php echo set_value('program_studi', $db->program_studi3); ?>">
-								<?php echo form_error('program_studi'); ?>
+								<input type="text" class="form-control" name="program_studi3" value="<?php echo set_value('program_studi', $db->program_studi3); ?>">
+
 							</div>
 						</div>
 
 						<div class="form-group">
-							<label for="nama" class="control-label col-sm-2">Nama </label>
+							<label for="nama4" class="control-label col-sm-2">Nama </label>
 							<div class="col-sm-10">
-								<input type="text" class="form-control" name="nama" value="<?php echo set_value('nama', $db->nama4); ?>">
-								<?php echo form_error('nama'); ?>
+								<input type="text" class="form-control" name="nama4" value="<?php echo set_value('nama', $db->nama4); ?>">
+
 							</div>
 						</div>
 
 						<div class="form-group">
-							<label for="nim" class="control-label col-sm-2">NIM/NIS </label>
+							<label for="nim4" class="control-label col-sm-2">NIM/NIS </label>
 							<div class="col-sm-10">
-								<input type="text" class="form-control" name="nim" value="<?php echo set_value('nim', $db->nim4); ?>">
-								<?php echo form_error('nim'); ?>
+								<input type="text" class="form-control" name="nim4" value="<?php echo set_value('nim', $db->nim4); ?>">
+
 							</div>
 						</div>
 
 						<div class="form-group">
-							<label for="program_studi" class="control-label col-sm-2">Program Studi </label>
+							<label for="program_studi4" class="control-label col-sm-2">Program Studi </label>
 							<div class="col-sm-10">
-								<input type="text" class="form-control" name="program_studi" value="<?php echo set_value('program_studi', $db->program_studi4); ?>">
-								<?php echo form_error('program_studi'); ?>
+								<input type="text" class="form-control" name="program_studi4" value="<?php echo set_value('program_studi', $db->program_studi4); ?>">
+
 							</div>
 						</div>
 
 						<div class="form-group">
-							<label for="nama" class="control-label col-sm-2">Nama </label>
+							<label for="nama5" class="control-label col-sm-2">Nama </label>
 							<div class="col-sm-10">
-								<input type="text" class="form-control" name="nama" value="<?php echo set_value('nama', $db->nama5); ?>">
-								<?php echo form_error('nama'); ?>
+								<input type="text" class="form-control" name="nama5" value="<?php echo set_value('nama', $db->nama5); ?>">
+
 							</div>
 						</div>
 
 						<div class="form-group">
-							<label for="nim" class="control-label col-sm-2">NIM/NIS </label>
+							<label for="nim5" class="control-label col-sm-2">NIM/NIS </label>
 							<div class="col-sm-10">
-								<input type="text" class="form-control" name="nim" value="<?php echo set_value('nim', $db->nim5); ?>">
-								<?php echo form_error('nim'); ?>
+								<input type="text" class="form-control" name="nim5" value="<?php echo set_value('nim', $db->nim5); ?>">
+
 							</div>
 						</div>
 
 						<div class="form-group">
-							<label for="program_studi" class="control-label col-sm-2">Program Studi </label>
+							<label for="program_studi5" class="control-label col-sm-2">Program Studi </label>
 							<div class="col-sm-10">
-								<input type="text" class="form-control" name="program_studi" value="<?php echo set_value('program_studi', $db->program_studi5); ?>">
-								<?php echo form_error('program_studi'); ?>
+								<input type="text" class="form-control" name="program_studi5" value="<?php echo set_value('program_studi', $db->program_studi5); ?>">
+
 							</div>
 						</div>
 
 						<div class="form-group">
-							<label for="nama" class="control-label col-sm-2">Nama </label>
+							<label for="nama6" class="control-label col-sm-2">Nama </label>
 							<div class="col-sm-10">
-								<input type="text" class="form-control" name="nama" value="<?php echo set_value('nama', $db->nama6); ?>">
-								<?php echo form_error('nama'); ?>
+								<input type="text" class="form-control" name="nama6" value="<?php echo set_value('nama', $db->nama6); ?>">
+
 							</div>
 						</div>
 
 						<div class="form-group">
-							<label for="nim" class="control-label col-sm-2">NIM/NIS </label>
+							<label for="nim6" class="control-label col-sm-2">NIM/NIS </label>
 							<div class="col-sm-10">
-								<input type="text" class="form-control" name="nim" value="<?php echo set_value('nim', $db->nim6); ?>">
-								<?php echo form_error('nim'); ?>
+								<input type="text" class="form-control" name="nim6" value="<?php echo set_value('nim', $db->nim6); ?>">
+
 							</div>
 						</div>
 
 						<div class="form-group">
-							<label for="program_studi" class="control-label col-sm-2">Program Studi </label>
+							<label for="program_studi6" class="control-label col-sm-2">Program Studi </label>
 							<div class="col-sm-10">
-								<input type="text" class="form-control" name="program_studi" value="<?php echo set_value('program_studi', $db->program_studi6); ?>">
-								<?php echo form_error('program_studi'); ?>
+								<input type="text" class="form-control" name="program_studi6" value="<?php echo set_value('program_studi', $db->program_studi6); ?>">
+
 							</div>
 						</div>
 

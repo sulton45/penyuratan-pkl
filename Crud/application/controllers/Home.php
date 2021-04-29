@@ -230,13 +230,49 @@ class Home extends CI_Controller
 			$pdf->MultiCell(50, 10, $data_surat->program_studi, 1, 'C', 0, 0, '', '', true, 0, false, true, 10, 'M');
 			$pdf->MultiCell(17, 10, "", 0, 'C', 0, 1, '', '', true, 0, false, true, 10);
 
-			if ($data_surat->nama2 == '') {
-			} else {
+			if (!empty($data_surat->nama2)) {
 				$pdf->MultiCell(22, 10, "", 0, 'C', 0, 0, '', '', true, 0, false, true, 10);
 				$pdf->MultiCell(50, 10, $data_surat->nama2, 1, 'C', 0, 0, '', '', true, 0, false, true, 10, 'M');
 				$pdf->MultiCell(50, 10, $data_surat->nim2, 1, 'C', 0, 0, '', '', true, 0, false, true, 10, 'M');
 				$pdf->MultiCell(50, 10, $data_surat->program_studi2, 1, 'C', 0, 0, '', '', true, 0, false, true, 10, 'M');
 				$pdf->MultiCell(17, 10, "", 0, 'C', 0, 1, '', '', true, 0, false, true, 10);
+			} else {
+			}
+
+			if (!empty($data_surat->nama3)) {
+				$pdf->MultiCell(22, 10, "", 0, 'C', 0, 0, '', '', true, 0, false, true, 10);
+				$pdf->MultiCell(50, 10, $data_surat->nama3, 1, 'C', 0, 0, '', '', true, 0, false, true, 10, 'M');
+				$pdf->MultiCell(50, 10, $data_surat->nim3, 1, 'C', 0, 0, '', '', true, 0, false, true, 10, 'M');
+				$pdf->MultiCell(50, 10, $data_surat->program_studi3, 1, 'C', 0, 0, '', '', true, 0, false, true, 10, 'M');
+				$pdf->MultiCell(17, 10, "", 0, 'C', 0, 1, '', '', true, 0, false, true, 10);
+			} else {
+			}
+
+			if (!empty($data_surat->nama4)) {
+				$pdf->MultiCell(22, 10, "", 0, 'C', 0, 0, '', '', true, 0, false, true, 10);
+				$pdf->MultiCell(50, 10, $data_surat->nama4, 1, 'C', 0, 0, '', '', true, 0, false, true, 10, 'M');
+				$pdf->MultiCell(50, 10, $data_surat->nim4, 1, 'C', 0, 0, '', '', true, 0, false, true, 10, 'M');
+				$pdf->MultiCell(50, 10, $data_surat->program_studi4, 1, 'C', 0, 0, '', '', true, 0, false, true, 10, 'M');
+				$pdf->MultiCell(17, 10, "", 0, 'C', 0, 1, '', '', true, 0, false, true, 10);
+			} else {
+			}
+
+			if (!empty($data_surat->nama5)) {
+				$pdf->MultiCell(22, 10, "", 0, 'C', 0, 0, '', '', true, 0, false, true, 10);
+				$pdf->MultiCell(50, 10, $data_surat->nama5, 1, 'C', 0, 0, '', '', true, 0, false, true, 10, 'M');
+				$pdf->MultiCell(50, 10, $data_surat->nim5, 1, 'C', 0, 0, '', '', true, 0, false, true, 10, 'M');
+				$pdf->MultiCell(50, 10, $data_surat->program_studi5, 1, 'C', 0, 0, '', '', true, 0, false, true, 10, 'M');
+				$pdf->MultiCell(17, 10, "", 0, 'C', 0, 1, '', '', true, 0, false, true, 10);
+			} else {
+			}
+
+			if (!empty($data_surat->nama6)) {
+				$pdf->MultiCell(22, 10, "", 0, 'C', 0, 0, '', '', true, 0, false, true, 10);
+				$pdf->MultiCell(50, 10, $data_surat->nama6, 1, 'C', 0, 0, '', '', true, 0, false, true, 10, 'M');
+				$pdf->MultiCell(50, 10, $data_surat->nim6, 1, 'C', 0, 0, '', '', true, 0, false, true, 10, 'M');
+				$pdf->MultiCell(50, 10, $data_surat->program_studi6, 1, 'C', 0, 0, '', '', true, 0, false, true, 10, 'M');
+				$pdf->MultiCell(17, 10, "", 0, 'C', 0, 1, '', '', true, 0, false, true, 10);
+			} else {
 			}
 
 			$pdf->Ln(3);
