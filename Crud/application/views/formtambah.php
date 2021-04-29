@@ -134,6 +134,111 @@ defined('BASEPATH') or exit('Akses langsung tidak diperbolehkan');
 						</div>
 
 						<div class="form-group">
+							<label for="nama2" class="control-label col-sm-2">Nama </label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" name="nama2" value="<?php echo set_value('nama2'); ?>">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="nim2" class="control-label col-sm-2">NIM/NIS </label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" name="nim2" value="<?php echo set_value('nim2'); ?>">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="program_studi2" class="control-label col-sm-2">Program Studi </label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" name="program_studi2" value="<?php echo set_value('program_studi2'); ?>">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="nama3" class="control-label col-sm-2">Nama </label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" name="nama3" value="<?php echo set_value('nama3'); ?>">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="nim3" class="control-label col-sm-2">NIM/NIS </label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" name="nim3" value="<?php echo set_value('nim3'); ?>">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="program_studi3" class="control-label col-sm-2">Program Studi </label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" name="program_studi3" value="<?php echo set_value('program_studi3'); ?>">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="nama4" class="control-label col-sm-2">Nama </label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" name="nama4" value="<?php echo set_value('nama4'); ?>">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="nim4" class="control-label col-sm-2">NIM/NIS </label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" name="nim4" value="<?php echo set_value('nim4'); ?>">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="program_studi4" class="control-label col-sm-2">Program Studi </label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" name="program_studi4" value="<?php echo set_value('program_studi4'); ?>">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="nama5" class="control-label col-sm-2">Nama </label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" name="nama5" value="<?php echo set_value('nama5'); ?>">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="nim5" class="control-label col-sm-2">NIM/NIS </label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" name="nim5" value="<?php echo set_value('nim5'); ?>">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="program_studi5" class="control-label col-sm-2">Program Studi </label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" name="program_studi5" value="<?php echo set_value('program_studi5'); ?>">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="nama6" class="control-label col-sm-2">Nama </label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" name="nama6" value="<?php echo set_value('nama6'); ?>">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="nim6" class="control-label col-sm-2">NIM/NIS </label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" name="nim6" value="<?php echo set_value('nim6'); ?>">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="program_studi6" class="control-label col-sm-2">Program Studi </label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" name="program_studi6" value="<?php echo set_value('program_studi6'); ?>">
+							</div>
+						</div>
+
+						<div class="form-group">
 							<div class="btn-form col-sm-12">
 								<a href="<?php echo base_url('home/lihatdata'); ?>"><button type="button" class='btn btn-default'>Kembali</button></a>
 								<button type="submit" class='btn btn-primary'>Simpan</button>

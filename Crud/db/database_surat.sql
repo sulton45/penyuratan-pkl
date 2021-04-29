@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 25, 2021 at 10:20 AM
+-- Generation Time: Apr 29, 2021 at 11:34 AM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -42,17 +42,31 @@ CREATE TABLE `surat` (
   `nama` varchar(255) NOT NULL,
   `nim` varchar(255) NOT NULL,
   `program_studi` varchar(255) NOT NULL,
-  `nama2` varchar(255) NOT NULL
+  `nama2` varchar(255) NOT NULL,
+  `nim2` varchar(255) NOT NULL,
+  `program_studi2` varchar(255) NOT NULL,
+  `nama3` varchar(255) NOT NULL,
+  `nim3` varchar(255) NOT NULL,
+  `program_studi3` varchar(255) NOT NULL,
+  `nama4` varchar(255) NOT NULL,
+  `nim4` varchar(255) NOT NULL,
+  `program_studi4` varchar(255) NOT NULL,
+  `nama5` varchar(255) NOT NULL,
+  `nim5` varchar(255) NOT NULL,
+  `program_studi5` varchar(255) NOT NULL,
+  `nama6` varchar(255) NOT NULL,
+  `nim6` varchar(255) NOT NULL,
+  `program_studi6` varchar(255) NOT NULL,
+  `siswa` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `surat`
 --
 
-INSERT INTO `surat` (`id_surat`, `no_surat`, `lampiran`, `hal_surat`, `tglsurat_dibuat`, `kepada_surat`, `institusi_surat`, `daerah_surat`, `no_surat_pemohon`, `tglsurat_pemohon`, `masa_magang`, `nama`, `nim`, `program_studi`, `nama2`) VALUES
-(1, '1110/2211/bbbc', '-', 'Magang', '12 Maret 2021', '', '', '', '2580/UNJ/00', '20 Maret 2021', 'bbbbbbb', 'Sulton Ibrahim', '1512618078', 'Informatika', ''),
-(3, '1110/2211/bbbc', '999', 'Magang', '12 Maret 2021', '', '', '', '2580/UNJ/00asd', '20 Maret 2021', 'bbbbbbb', 'hehe', 'bbbbbbb', 'aaaaaaaaaaaaaaaaa', ''),
-(4, 'ssss', '-', 'Magang', '12312321', '', '', '', 'aaaaa', '11111111', 'aaaa', 'hehe', 'aaaaa', 'aaaaaaaaaa', '');
+INSERT INTO `surat` (`id_surat`, `no_surat`, `lampiran`, `hal_surat`, `tglsurat_dibuat`, `kepada_surat`, `institusi_surat`, `daerah_surat`, `no_surat_pemohon`, `tglsurat_pemohon`, `masa_magang`, `nama`, `nim`, `program_studi`, `nama2`, `nim2`, `program_studi2`, `nama3`, `nim3`, `program_studi3`, `nama4`, `nim4`, `program_studi4`, `nama5`, `nim5`, `program_studi5`, `nama6`, `nim6`, `program_studi6`, `siswa`) VALUES
+(1, '1110/2211/bbbc', '-', 'Magang', '12 Maret 2021', 'Rektor UNJ', 'Universitas Negeri Jakarta', 'Jakarta', '2580/UNJ/00', '20 Maret 2021', '1 April 2021 - 1 Mei 2021', 'Sulton Ibrahim', '1512618078', 'Informatika', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(2, '1110/2211/bbbc', '-', 'Magang', '12 Maret 2021', 'Rektor UNJ', 'Universitas Negeri Jakarta', 'Jakarta', '2580/UNJ/00', '20 Maret 2021', '1 April 2021 - 1 Mei 2021', 'Sulton Ibrahim', '1512618078', 'Informatika', 'Sandi Pratama', '1512618046', 'Informatika', '', '', '', '', '', '', '', '', '', '', '', '', '');
 
 --
 -- Indexes for dumped tables
@@ -72,7 +86,7 @@ ALTER TABLE `surat`
 -- AUTO_INCREMENT for table `surat`
 --
 ALTER TABLE `surat`
-  MODIFY `id_surat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_surat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

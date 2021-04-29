@@ -129,6 +129,129 @@ defined('BASEPATH') or exit('Akses langsung tidak diperbolehkan');
 						</div>
 
 						<div class="form-group">
+							<label for="nama" class="control-label col-sm-2">Nama </label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" name="nama" value="<?php echo set_value('nama', $db->nama2); ?>">
+								<?php echo form_error('nama'); ?>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="nim" class="control-label col-sm-2">NIM/NIS </label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" name="nim" value="<?php echo set_value('nim', $db->nim2); ?>">
+								<?php echo form_error('nim'); ?>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="program_studi" class="control-label col-sm-2">Program Studi </label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" name="program_studi" value="<?php echo set_value('program_studi', $db->program_studi2); ?>">
+								<?php echo form_error('program_studi'); ?>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="nama" class="control-label col-sm-2">Nama </label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" name="nama" value="<?php echo set_value('nama', $db->nama3); ?>">
+								<?php echo form_error('nama'); ?>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="nim" class="control-label col-sm-2">NIM/NIS </label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" name="nim" value="<?php echo set_value('nim', $db->nim3); ?>">
+								<?php echo form_error('nim'); ?>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="program_studi" class="control-label col-sm-2">Program Studi </label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" name="program_studi" value="<?php echo set_value('program_studi', $db->program_studi3); ?>">
+								<?php echo form_error('program_studi'); ?>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="nama" class="control-label col-sm-2">Nama </label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" name="nama" value="<?php echo set_value('nama', $db->nama4); ?>">
+								<?php echo form_error('nama'); ?>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="nim" class="control-label col-sm-2">NIM/NIS </label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" name="nim" value="<?php echo set_value('nim', $db->nim4); ?>">
+								<?php echo form_error('nim'); ?>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="program_studi" class="control-label col-sm-2">Program Studi </label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" name="program_studi" value="<?php echo set_value('program_studi', $db->program_studi4); ?>">
+								<?php echo form_error('program_studi'); ?>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="nama" class="control-label col-sm-2">Nama </label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" name="nama" value="<?php echo set_value('nama', $db->nama5); ?>">
+								<?php echo form_error('nama'); ?>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="nim" class="control-label col-sm-2">NIM/NIS </label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" name="nim" value="<?php echo set_value('nim', $db->nim5); ?>">
+								<?php echo form_error('nim'); ?>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="program_studi" class="control-label col-sm-2">Program Studi </label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" name="program_studi" value="<?php echo set_value('program_studi', $db->program_studi5); ?>">
+								<?php echo form_error('program_studi'); ?>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="nama" class="control-label col-sm-2">Nama </label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" name="nama" value="<?php echo set_value('nama', $db->nama6); ?>">
+								<?php echo form_error('nama'); ?>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="nim" class="control-label col-sm-2">NIM/NIS </label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" name="nim" value="<?php echo set_value('nim', $db->nim6); ?>">
+								<?php echo form_error('nim'); ?>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="program_studi" class="control-label col-sm-2">Program Studi </label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" name="program_studi" value="<?php echo set_value('program_studi', $db->program_studi6); ?>">
+								<?php echo form_error('program_studi'); ?>
+							</div>
+						</div>
+
+
+
+
+						<div class="form-group">
 							<div class="btn-form col-sm-12">
 								<a href="<?php echo base_url('home/lihatdata'); ?>"><button type="button" class='btn btn-default'>Batal</button></a>
 								<button type="submit" class='btn btn-primary'>Simpan</button>

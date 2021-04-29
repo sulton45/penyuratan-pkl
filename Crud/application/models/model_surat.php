@@ -30,6 +30,21 @@ class model_surat extends CI_Model
 			'nama' => $this->input->post('nama'),
 			'nim' => $this->input->post('nim'),
 			'program_studi' => $this->input->post('program_studi'),
+			'nama2' => $this->input->post('nama2'),
+			'nim2' => $this->input->post('nim2'),
+			'program_studi2' => $this->input->post('program_studi2'),
+			'nama3' => $this->input->post('nama3'),
+			'nim3' => $this->input->post('nim3'),
+			'program_studi3' => $this->input->post('program_studi3'),
+			'nama4' => $this->input->post('nama4'),
+			'nim4' => $this->input->post('nim4'),
+			'program_studi4' => $this->input->post('program_studi4'),
+			'nama5' => $this->input->post('nama5'),
+			'nim5' => $this->input->post('nim5'),
+			'program_studi5' => $this->input->post('program_studi5'),
+			'nama6' => $this->input->post('nama6'),
+			'nim6' => $this->input->post('nim6'),
+			'program_studi6' => $this->input->post('program_studi6'),
 		];
 
 		$this->db->insert('surat', $data);
@@ -65,6 +80,21 @@ class model_surat extends CI_Model
 			'nama' => $this->input->post('nama'),
 			'nim' => $this->input->post('nim'),
 			'program_studi' => $this->input->post('program_studi'),
+			'nama2' => $this->input->post('nama2'),
+			'nim2' => $this->input->post('nim2'),
+			'program_studi2' => $this->input->post('program_studi2'),
+			'nama3' => $this->input->post('nama3'),
+			'nim3' => $this->input->post('nim3'),
+			'program_studi3' => $this->input->post('program_studi3'),
+			'nama4' => $this->input->post('nama4'),
+			'nim4' => $this->input->post('nim4'),
+			'program_studi4' => $this->input->post('program_studi4'),
+			'nama5' => $this->input->post('nama5'),
+			'nim5' => $this->input->post('nim5'),
+			'program_studi5' => $this->input->post('program_studi5'),
+			'nama6' => $this->input->post('nama6'),
+			'nim6' => $this->input->post('nim6'),
+			'program_studi6' => $this->input->post('program_studi6'),
 		];
 
 		$this->db->update('surat', $data, $kondisi);
