@@ -148,6 +148,11 @@ class Home extends CI_Controller
 				'rules' => 'required'
 			],
 			[
+				'field' => 'jenis_siswa',
+				'label' => 'Jenis Siswa Tidak Boleh Kosong',
+				'rules' => 'required'
+			],
+			[
 				'field' => 'tglsurat_pemohon',
 				'label' => 'Tanggal Surat Pemohon Tidak Boleh Kosong',
 				'rules' => 'required'
