@@ -97,7 +97,6 @@ defined('BASEPATH') or exit('Akses langsung tidak diperbolehkan');
 							<label for="jenis_siswa" class="control-label col-sm-2">Jenis Siswa </label>
 							<div class="col-sm-10">
 								<select type="text" class="form-control" name="jenis_siswa" value="<?php echo set_value('jenis_siswa'); ?>">
-									<option value="">Pilih Salah Satu</option>
 									<option value="Siswa">Siswa</option>
 									<option value="Mahasiswa">Mahasiswa</option>
 								</select>
