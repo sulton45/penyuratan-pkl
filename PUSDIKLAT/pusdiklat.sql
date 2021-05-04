@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 03, 2021 at 09:48 AM
--- Server version: 10.4.16-MariaDB
--- PHP Version: 7.4.12
+-- Generation Time: May 04, 2021 at 10:23 AM
+-- Server version: 10.4.18-MariaDB
+-- PHP Version: 8.0.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -63,17 +63,28 @@ CREATE TABLE `mahasiswa` (
   `surat_magang` varchar(100) NOT NULL,
   `tanggal_masuk` varchar(100) NOT NULL,
   `tanggal_keluar` varchar(100) NOT NULL,
-  `status` varchar(50) NOT NULL
+  `status` varchar(50) NOT NULL,
+  `no_surat_balasan` varchar(255) NOT NULL,
+  `jumlah_lampiran` varchar(255) NOT NULL,
+  `hal_surat` varchar(255) NOT NULL,
+  `tanggal_dibuat` varchar(255) NOT NULL,
+  `kepada` varchar(255) NOT NULL,
+  `tujuan_daerah` varchar(255) NOT NULL,
+  `tglsurat_pemohon` varchar(255) NOT NULL,
+  `masa_magang` varchar(255) NOT NULL,
+  `nama2` varchar(255) NOT NULL,
+  `nim2` varchar(255) NOT NULL,
+  `nama3` varchar(255) NOT NULL,
+  `nim3` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `mahasiswa`
 --
 
-INSERT INTO `mahasiswa` (`nim`, `nama`, `instansi`, `prodi`, `no_telp`, `email`, `khs`, `semester`, `unit`, `ketentuan`, `no_surat`, `surat_magang`, `tanggal_masuk`, `tanggal_keluar`, `status`) VALUES
-(134, 'Yuli Febyola', 'univ', 'Sistem Informasi', '087', 'yuli@gmail.com', 'KHS-1810512028-120220211.pdf', 6, 'Pusat Jasa Informasi Perpustakaan dan Pengelolaan Naskah Nusantara', 'Kerja Praktik', 'B/268UN61/FIK/2021', 'SURAT_KP-NURUL_AINI_DAN_YULI_F1.pdf', '2021-04-25', '2021-05-08', 'Terima'),
-(1234, 'sandii', 'univ a', 'Sistem Informasi', '081', 'aininurul.agustus@gmail.com', 'KHS-1810512028-120220212.pdf', 6, 'Direktorat Standarisasi dan Akreditasi', 'Kerja Praktik', 'B/268UN61/FIK/2021', 'SERTIFIKAT_SENAMIKA_0448-0448.pdf', '2021-05-03', '2021-06-05', 'Terima'),
-(1810512028, 'Nurul Aini', 'Universitas Pembangunan Nasional Veteran Jakarta', 'Sistem Informasi', '0813', 'nurula@upnvj.ac.id', 'KHS-1810512028-12022021.pdf', 6, 'Inspektorat', 'Kerja Praktik', 'B/268UN61/FIK/2021', 'SURAT_KP-NURUL_AINI_DAN_YULI_F.pdf', '2021-05-08', '2021-06-05', 'Tolak');
+INSERT INTO `mahasiswa` (`nim`, `nama`, `instansi`, `prodi`, `no_telp`, `email`, `khs`, `semester`, `unit`, `ketentuan`, `no_surat`, `surat_magang`, `tanggal_masuk`, `tanggal_keluar`, `status`, `no_surat_balasan`, `jumlah_lampiran`, `hal_surat`, `tanggal_dibuat`, `kepada`, `tujuan_daerah`, `tglsurat_pemohon`, `masa_magang`, `nama2`, `nim2`, `nama3`, `nim3`) VALUES
+(1512618078, 'Sulton Ibrahim', 'Universitas Negeri Jakarta', 'Pendidikan Informatika', '14045', 'sultonibrahin089@gmail.com', 'Permohonan_icon_Penelitian_An_Ikawati_Lestari.pdf', 6, 'Pusat Pengembangan Perpustakaan Umum dan Khusus', 'Kerja Praktik', '2580/UNJ/00', 'Permohonan_icon_Penelitian_An_Ikawati_Lestari_(1).pdf', '', '', '', '1110/2211/bbbc', '-', 'Magang', '12 Maret 2021', 'Rektor UNJ', 'Jakarta', '20 Maret 2021', '1 April 2021 - 1 Mei 2021', 'Sandi Pratama', '14045', 'Jaja', '14044'),
+(1810512028, 'Nurul Aini', 'Universitas Pembangunan Nasional Veteran Jakarta', 'Sistem Informasi', '0813', 'nurula@upnvj.ac.id', 'KHS-1810512028-12022021.pdf', 6, 'Inspektorat', 'Kerja Praktik', 'B/268UN61/FIK/2021', 'SURAT_KP-NURUL_AINI_DAN_YULI_F.pdf', '2021-05-08', '2021-06-05', 'Tolak', '', '', '', '', '', '', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
