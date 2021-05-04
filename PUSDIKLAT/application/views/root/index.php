@@ -35,8 +35,7 @@
 				<td class="text-center"><strong>Unit Kerja</strong></td>
 				<td class="text-center"><strong>Keterangan</strong></td>
 				<td class="text-center"><strong>Status</strong></td>
-				<td class="text-center"><strong>Tanggal Masuk</strong></td>
-				<td class="text-center"><strong>Tanggal Keluar</strong></td>
+				<td class="text-center"><strong>Masa Magang</strong></td>
 				<td class="text-center"></td>
 			</tr>
 		</thead>
@@ -49,8 +48,7 @@
 					<td><?= $mhs['unit']; ?></td>
 					<td><?= $mhs['ketentuan']; ?></td>
 					<td><?= $mhs['status']; ?></td>
-					<td><?= $mhs['tanggal_masuk']; ?></td>
-					<td><?= $mhs['tanggal_keluar']; ?></td>
+					<td><?= $mhs['masa_magang']; ?></td>
 					<td>
 						<a href="<?= base_url("root/detil/") . $mhs['nim']; ?>" class="btn btn-sm"><img src="<?= base_url("assets/loupe.png"); ?>" width="25"></a>
 						<a href="<?= base_url("root/pdf/") . $mhs['nim']; ?>" class="btn btn-sm">

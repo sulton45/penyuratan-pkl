@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 04, 2021 at 10:23 AM
--- Server version: 10.4.18-MariaDB
--- PHP Version: 8.0.3
+-- Generation Time: Apr 05, 2021 at 10:11 AM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.3.15
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -24,132 +25,134 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `login`
+-- Table structure for table `magang`
 --
 
-CREATE TABLE `login` (
-  `id_user` varchar(5) NOT NULL,
-  `username` varchar(25) NOT NULL,
-  `password` varchar(10) NOT NULL,
-  `role` enum('root','admin') NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `login`
---
-
-INSERT INTO `login` (`id_user`, `username`, `password`, `role`) VALUES
-('01', 'root', 'root', 'root'),
-('02', 'admin', 'admin', 'admin');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `mahasiswa`
---
-
-CREATE TABLE `mahasiswa` (
-  `nim` int(13) NOT NULL,
-  `nama` varchar(100) NOT NULL,
-  `instansi` varchar(100) NOT NULL,
-  `prodi` varchar(100) NOT NULL,
-  `no_telp` varchar(13) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `khs` varchar(75) NOT NULL,
-  `semester` int(2) NOT NULL,
-  `unit` varchar(255) NOT NULL,
-  `ketentuan` varchar(100) NOT NULL,
-  `no_surat` varchar(100) NOT NULL,
-  `surat_magang` varchar(100) NOT NULL,
-  `tanggal_masuk` varchar(100) NOT NULL,
-  `tanggal_keluar` varchar(100) NOT NULL,
-  `status` varchar(50) NOT NULL,
-  `no_surat_balasan` varchar(255) NOT NULL,
-  `jumlah_lampiran` varchar(255) NOT NULL,
-  `hal_surat` varchar(255) NOT NULL,
-  `tanggal_dibuat` varchar(255) NOT NULL,
-  `kepada` varchar(255) NOT NULL,
-  `tujuan_daerah` varchar(255) NOT NULL,
-  `tglsurat_pemohon` varchar(255) NOT NULL,
-  `masa_magang` varchar(255) NOT NULL,
-  `nama2` varchar(255) NOT NULL,
-  `nim2` varchar(255) NOT NULL,
-  `nama3` varchar(255) NOT NULL,
-  `nim3` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `mahasiswa`
---
-
-INSERT INTO `mahasiswa` (`nim`, `nama`, `instansi`, `prodi`, `no_telp`, `email`, `khs`, `semester`, `unit`, `ketentuan`, `no_surat`, `surat_magang`, `tanggal_masuk`, `tanggal_keluar`, `status`, `no_surat_balasan`, `jumlah_lampiran`, `hal_surat`, `tanggal_dibuat`, `kepada`, `tujuan_daerah`, `tglsurat_pemohon`, `masa_magang`, `nama2`, `nim2`, `nama3`, `nim3`) VALUES
-(1512618078, 'Sulton Ibrahim', 'Universitas Negeri Jakarta', 'Pendidikan Informatika', '14045', 'sultonibrahin089@gmail.com', 'Permohonan_icon_Penelitian_An_Ikawati_Lestari.pdf', 6, 'Pusat Pengembangan Perpustakaan Umum dan Khusus', 'Kerja Praktik', '2580/UNJ/00', 'Permohonan_icon_Penelitian_An_Ikawati_Lestari_(1).pdf', '', '', '', '1110/2211/bbbc', '-', 'Magang', '12 Maret 2021', 'Rektor UNJ', 'Jakarta', '20 Maret 2021', '1 April 2021 - 1 Mei 2021', 'Sandi Pratama', '14045', 'Jaja', '14044'),
-(1810512028, 'Nurul Aini', 'Universitas Pembangunan Nasional Veteran Jakarta', 'Sistem Informasi', '0813', 'nurula@upnvj.ac.id', 'KHS-1810512028-12022021.pdf', 6, 'Inspektorat', 'Kerja Praktik', 'B/268UN61/FIK/2021', 'SURAT_KP-NURUL_AINI_DAN_YULI_F.pdf', '2021-05-08', '2021-06-05', 'Tolak', '', '', '', '', '', '', '', '', '', '', '', '');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `penelitian`
---
-
-CREATE TABLE `penelitian` (
-  `id_penelitian` int(4) NOT NULL,
-  `nim` int(13) NOT NULL,
+CREATE TABLE `magang` (
+  `nim` int(15) NOT NULL,
   `nama` varchar(255) NOT NULL,
   `instansi` varchar(255) NOT NULL,
-  `prodi` varchar(255) NOT NULL,
-  `no_telp` varchar(13) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `nama_dosen` varchar(255) NOT NULL,
-  `no_telp_dosen` varchar(13) NOT NULL,
-  `email_dosen` varchar(100) NOT NULL,
-  `judul` varchar(500) NOT NULL,
-  `abstrak` text NOT NULL,
-  `khs` varchar(500) NOT NULL,
-  `no_surat_penelitian` varchar(100) NOT NULL,
-  `surat_penelitian` varchar(100) NOT NULL
+  `prodi` varchar(50) NOT NULL,
+  `no_telp` varchar(15) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `waktu` varchar(10) NOT NULL,
+  `khs` varchar(100) NOT NULL,
+  `unit` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `penelitian`
+-- Dumping data for table `magang`
 --
 
-INSERT INTO `penelitian` (`id_penelitian`, `nim`, `nama`, `instansi`, `prodi`, `no_telp`, `email`, `nama_dosen`, `no_telp_dosen`, `email_dosen`, `judul`, `abstrak`, `khs`, `no_surat_penelitian`, `surat_penelitian`) VALUES
-(3, 1810512025, 'Rania Ramadhina', 'Universitas Pembangunan Nasional Veteran Jakarta', 'Sistem Informasi', '085', 'raniarupnvj@ac.id', 'Ati Zaidiah', '089', 'aininurul.agustus@gmail.com', 'bfndjisabfbjsdhbf', 'dsfbjasdfnijaefn 0293nr8', 'KHS-1810512028-12022021.pdf', '4r43f', 'Surat_Pernyataan_Magang_Nurul_Yuli.pdf'),
-(4, 345, 'Yuli Febyola', 'univ', 'Sistem Informasi', '089', 'yuli@gmail.com', 'Ati Zaidiah', '089', 'aininurul.agustus@gmail.com', 'iubibibpbp', 'bihbhuhluhuhuhjiu', 'KHS-1810512028-12022021.pdf', '7YH8UH8H8', 'SURAT_KP-NURUL_AINI_DAN_YULI_F.pdf'),
-(5, 456, 'nuraini azizi', 'Universitas Pembangunan Nasional Veteran Jakarta', 'Sistem Informasi', '085', 'nurula@upnvj.ac.id', 'Ati Zaidiah', '087', 'aininurul.agustus@gmail.com', 'bfndjisabfbjsdhbf', 'hhfityfyjyciycycytfyt', 'KHS-1810512028-1202202111.pdf', 'b089', 'SURAT_KP-NURUL_AINI_DAN_YULI_F1.pdf');
+INSERT INTO `magang` (`nim`, `nama`, `instansi`, `prodi`, `no_telp`, `email`, `waktu`, `khs`, `unit`) VALUES
+(1810512028, 'Nurul Aini', 'Universitas Pembangunan Nasional Veteran Jakarta', 'Sistem Informasi', '085776808738', 'nurula@upnvj.ac.id', '', '', ''),
+(1810512034, 'Yuli Febyola', 'Universitas Pembangunan Nasional Veteran Jakarta', 'Sistem Informasi', '081912404486', 'yulifebyola@upnvj.ac.id', '', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `penlit`
+--
+
+CREATE TABLE `penlit` (
+  `nim_penlit` int(15) NOT NULL,
+  `nama_penlit` varchar(255) NOT NULL,
+  `instansi_penlit` varchar(255) NOT NULL,
+  `prodi_penlit` varchar(255) NOT NULL,
+  `no_telp_penlit` varchar(15) NOT NULL,
+  `email_penlit` varchar(50) NOT NULL,
+  `khs_penlit` varchar(100) NOT NULL,
+  `abstraks` text NOT NULL,
+  `judul` varchar(255) NOT NULL,
+  `dosen_penlit` varchar(255) NOT NULL,
+  `no_telp_dosen` varchar(15) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `penlit`
+--
+
+INSERT INTO `penlit` (`nim_penlit`, `nama_penlit`, `instansi_penlit`, `prodi_penlit`, `no_telp_penlit`, `email_penlit`, `khs_penlit`, `abstraks`, `judul`, `dosen_penlit`, `no_telp_dosen`) VALUES
+(1810512002, 'Muhammad Rio Pratama', 'Universitas Pembangunan Nasional Veteran Jakarta', 'Sistem Informasi', '081310215976', 'riopr@upnvj.ac.id', '', 'abcdefghijklmnopqrstuvwxyz', 'dkasjf sjnfka ndans', 'Andhika Octa', '08962098228'),
+(1810512031, 'Khusnul Khotimah', 'Universitas Pembangunan Nasional Veteran Jakarta', 'Sistem Informasi', '087798563012', 'khusnulkh@upnvj.ac.id', '', 'abstrak adalah bla bla bla', 'judul adalah bla bla bla', 'Andhika Octa', '081234567890');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `surat_magang`
+--
+
+CREATE TABLE `surat_magang` (
+  `no_surat` varchar(50) NOT NULL,
+  `surat` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `surat_penlit`
+--
+
+CREATE TABLE `surat_penlit` (
+  `no_surat_penlit` varchar(50) NOT NULL,
+  `nama_surat` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `id_user` int(11) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `nama_user` varchar(100) NOT NULL,
+  `role` enum('admin','user') NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id_user`, `username`, `password`, `nama_user`, `role`) VALUES
+(1, 'admin_pusat', 'pusdiklat', 'Rina', 'admin'),
+(2, 'admin_unit', 'pusdiklat123', 'Mytha', 'user');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `login`
+-- Indexes for table `magang`
 --
-ALTER TABLE `login`
-  ADD PRIMARY KEY (`id_user`);
-
---
--- Indexes for table `mahasiswa`
---
-ALTER TABLE `mahasiswa`
+ALTER TABLE `magang`
   ADD PRIMARY KEY (`nim`);
 
 --
--- Indexes for table `penelitian`
+-- Indexes for table `penlit`
 --
-ALTER TABLE `penelitian`
-  ADD PRIMARY KEY (`id_penelitian`);
+ALTER TABLE `penlit`
+  ADD PRIMARY KEY (`nim_penlit`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- Indexes for table `surat_magang`
 --
+ALTER TABLE `surat_magang`
+  ADD PRIMARY KEY (`no_surat`);
 
 --
--- AUTO_INCREMENT for table `penelitian`
+-- Indexes for table `surat_penlit`
 --
-ALTER TABLE `penelitian`
-  MODIFY `id_penelitian` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+ALTER TABLE `surat_penlit`
+  ADD PRIMARY KEY (`no_surat_penlit`);
+
+--
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id_user`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

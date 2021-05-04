@@ -218,7 +218,7 @@ class Root extends CI_Controller
 			$pdf->Cell(189, 1, '2. Sekretaris Utama Perpustakaan Nasional RI', 0, 1);
 
 
-			$pdf->Output('jawaban_surat_magang_' . $data_surat->nama . '.pdf', 'I');
+			$pdf->Output('Surat_Jawaban_Magang_' . $data_surat->nama . '.pdf', 'I');
 		}
 	}
 }
