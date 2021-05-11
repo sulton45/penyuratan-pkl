@@ -71,6 +71,16 @@ class Root extends CI_Controller
 		$this->load->view('templates/footer');
 	}
 
+	public function buatSurat($nim)
+	{
+		$data['mahasiswa'] = $this->Root_model->getMahasiswaById($nim);
+		$data['unit'] = ['Biro Perencanaan dan Keuangan', 'Biro Hukum, Organisasi, Kerja Sama dan Hubungan Masyarakat', 'Biro SDM dan Umum', 'Direktorat Deposit dan Pengembangan Koleksi Perpustakaan', 'Pusat Bibliografi dan Pengolahan Bahan Perpustakaan', 'Pusat Preservasi dan Alih Media Bahan Perpustakaan', 'Pusat Jasa Informasi Perpustakaan dan Pengelolaan Naskah Nusantara', 'Direktorat Standarisasi dan Akreditasi', 'Pusat Pengembangan Perpustakaan Umum dan Khusus', 'Pusat Pengembangan Perpustakaan Sekolah/Madrasah dan Perguruan Tinggi', 'Pusat Analisis Perpustakaan dan Pengembangan Budaya Baca', 'Pusat Data dan Informasi', 'Pusat Pembinaan Pustakawan', 'Pusat Pendidikan dan Pelatihan', 'Inspektorat', 'Dan lain'];
+		$this->load->view('templates/header');
+		$this->load->view('templates/navbar');
+		$this->load->view('root/buatSurat', $data);
+		$this->load->view('templates/footer');
+	}
+
 	public function ubahData()
 	{
 		$this->session->set_flashdata('flashMessage', 'Berhasil Diubah');
