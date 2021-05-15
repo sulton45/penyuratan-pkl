@@ -37,17 +37,17 @@
 					<td><?= $p['abstrak']; ?></td>
 					<td>
 						<a href="<?= base_url("root/detilPenelitian/") . $p['id_penelitian']; ?>" class="btn btn-sm">
-							<img src="<?= base_url("assets/loupe.png"); ?>" width="25">
+							<img src="<?= base_url("assets/loupe.png"); ?>" width="25" data-toggle="tooltip" title="Detail Data Mahasiswa">
 						</a>
 					</td>
 					<td>
 						<a href="<?= base_url("root/buatSuratPenelitian/") . $p['id_penelitian']; ?>">
-							<img src="<?= base_url("assets/email.png"); ?>" width="25">
+							<img src="<?= base_url("assets/email.png"); ?>" width="25" data-toggle="tooltip" title="Buat Data Surat">
 						</a>
 					</td>
 					<td>
-						<a href="<?= base_url("root/pdf2/") . $p['id_penelitian']; ?>">
-							<img src="<?= base_url("assets/printer.png"); ?>" width="25">
+						<a href="<?= base_url("root/pdf2/") . $p['id_penelitian']; ?>" target="_blank">
+							<img src="<?= base_url("assets/printer.png"); ?>" width="25" data-toggle="tooltip" title="Print Surat">
 						</a>
 					</td>
 				</tr>
