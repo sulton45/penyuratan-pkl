@@ -20,6 +20,13 @@ class Root_model extends CI_Model
 		return $this->db->get('mahasiswa')->result_array();
 	}
 
+	public function searchPenelitian()
+	{
+		$keyword = $this->input->post("keyword", true);
+		$this->db->like('nama', $keyword);
+		return $this->db->get('penelitian')->result_array();
+	}
+
 	public function getAllpenlit()
 	{
 		return $this->db->get('penelitian')->result_array();
@@ -30,31 +37,59 @@ class Root_model extends CI_Model
 		return $this->db->get_where('mahasiswa', ['nim' => $nim])->row_array();
 	}
 
+	public function getPenlitById($id_penelitian)
+	{
+		return $this->db->get_where('penelitian', ['id_penelitian' => $id_penelitian])->row_array();
+	}
+
 	public function pilih_data($nim)
 	{
 		$query = $this->db->get_where('mahasiswa', ['nim' => $nim]);
 		return $query->row();
 	}
 
-	public function getPenlitById($id_penelitian)
+	public function pilih_data2($id_penelitian)
 	{
-		return $this->db->get_where('penelitian', ['id_penelitian' => $id_penelitian])->row_array();
+		$query = $this->db->get_where('penelitian', ['id_penelitian' => $id_penelitian]);
+		return $query->row();
 	}
 
+
+
 	public function editDataMahasiswa()
+
+	{
+		$nim = $this->input->post('nim', true);
+		$nama = $this->input->post('nama', true);
+		$no_telp = $this->input->post('no_telp', true);
+		$unit = $this->input->post('unit', true);
+		$tanggal_masuk = $this->input->post('tanggal_masuk', true);
+		$tanggal_keluar = $this->input->post('tanggal_keluar', true);
+
+		$data = array(
+			'nama' => $nama,
+			'no_telp' => $no_telp,
+			'unit' => $unit,
+			'tanggal_masuk' => $tanggal_masuk,
+			'tanggal_keluar' => $tanggal_keluar
+		);
+		$this->db->where('nim', $nim);
+		$this->db->update('mahasiswa', $data);
+	}
+
+	public function editDataSurat()
 
 	{
 		$nim = $this->input->post('nim', true);
 		$no_surat_balasan = $this->input->post('no_surat_balasan', true);
 		$jumlah_lampiran = $this->input->post('jumlah_lampiran', true);
 		$hal_surat = $this->input->post('hal_surat', true);
-		$tanggal_dibuat = $this->input->post('tanggal_dibuat', true);
+		$tgl_dibuat = $this->input->post('tgl_dibuat', true);
 		$kepada = $this->input->post('kepada', true);
 		$instansi = $this->input->post('instansi', true);
 		$tujuan_daerah = $this->input->post('tujuan_daerah', true);
 		$no_surat = $this->input->post('no_surat', true);
 		$tglsurat_pemohon = $this->input->post('tglsurat_pemohon', true);
-		$masa_magang = $this->input->post('masa_magang', true);
 		$nama = $this->input->post('nama', true);
 		$nama2 = $this->input->post('nama2', true);
 		$nim2 = $this->input->post('nim2', true);
@@ -66,13 +101,12 @@ class Root_model extends CI_Model
 			'no_surat_balasan' => $no_surat_balasan,
 			'jumlah_lampiran' => $jumlah_lampiran,
 			'hal_surat' => $hal_surat,
-			'tanggal_dibuat' => $tanggal_dibuat,
+			'tgl_dibuat' => $tgl_dibuat,
 			'kepada' => $kepada,
 			'instansi' => $instansi,
 			'tujuan_daerah' => $tujuan_daerah,
 			'no_surat' => $no_surat,
 			'tglsurat_pemohon' => $tglsurat_pemohon,
-			'masa_magang' => $masa_magang,
 			'nama' => $nama,
 			'nama2' => $nama2,
 			'nim2' => $nim2,
@@ -82,6 +116,42 @@ class Root_model extends CI_Model
 		$this->db->where('nim', $nim);
 		$this->db->update('mahasiswa', $data);
 	}
+
+	public function editDataPenelitian()
+
+	{
+
+		$id_penelitian = $this->input->post('id_penelitian', true);
+		$nama = $this->input->post('nama', true);
+		$nim = $this->input->post('nim', true);
+		$no_surat = $this->input->post('no_surat', true);
+		$judul = $this->input->post('judul', true);
+		$jumlah_lampiran = $this->input->post('jumlah_lampiran', true);
+		$tgl_dibuat = $this->input->post('tgl_dibuat', true);
+		$kepada = $this->input->post('kepada', true);
+		$instansi = $this->input->post('instansi', true);
+		$tujuan_daerah = $this->input->post('tujuan_daerah', true);
+		$tglsurat_pemohon = $this->input->post('tglsurat_pemohon', true);
+		$tujuan_penelitian = $this->input->post('tujuan_penelitian', true);
+
+
+		$data = array(
+			'nama' => $nama,
+			'nim' => $nim,
+			'no_surat' => $no_surat,
+			'judul' => $judul,
+			'jumlah_lampiran' => $jumlah_lampiran,
+			'tgl_dibuat' => $tgl_dibuat,
+			'kepada' => $kepada,
+			'instansi' => $instansi,
+			'tujuan_daerah' => $tujuan_daerah,
+			'tglsurat_pemohon' => $tglsurat_pemohon,
+			'tujuan_penelitian' => $tujuan_penelitian,
+		);
+		$this->db->where('id_penelitian', $id_penelitian);
+		$this->db->update('penelitian', $data);
+	}
+
 
 	public function hapusData($id)
 	{

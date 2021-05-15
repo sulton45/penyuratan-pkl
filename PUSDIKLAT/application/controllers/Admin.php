@@ -18,15 +18,28 @@ class Admin extends CI_Controller
 	{
 		$this->load->model('Admin_model');
 		$data['mahasiswa'] = $this->Admin_model->getAllmahasiswa();
+		if ($this->input->post('keyword')) {
+			$data['mahasiswa'] = $this->Admin_model->searchMahasiswa();
+		}
 		$this->load->view('templates/header');
 		$this->load->view('templates/navbar');
 		$this->load->view('admin/index', $data);
 		$this->load->view('templates/footer');
 	}
 
+	public function detil2($nim)
+	{
+		$data['mahasiswa'] = $this->Admin_model->getMahasiswaById($nim);
+		$this->load->view('templates/header');
+		$this->load->view('templates/navbar');
+		$this->load->view('admin/detil2', $data);
+		$this->load->view('templates/footer');
+	}
+
 	public function ubah($nim)
 	{
 		$data['mahasiswa'] = $this->Admin_model->getMahasiswaById($nim);
+		$data['status'] = ['Terima', 'Tolak'];
 		$this->load->view('templates/header');
 		$this->load->view('templates/navbar');
 		$this->load->view('admin/ubah', $data);

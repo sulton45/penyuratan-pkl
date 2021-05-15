@@ -65,7 +65,6 @@
 							<label for="nim3">NIM Mahasiswa Anggota</label>
 							<input type="number" name="nim3" class="form-control" id="nim3" value="<?= $mahasiswa['nim3']; ?>">
 						</div>
-
 						<button href="<?= base_url("root/index/"); ?>" class="btn btn-secondary mt-3">Kembali</button>
 						<button type="submit" name="ubah" class="btn btn-primary mt-3 float-end">Simpan</button>
 					</form>

@@ -1,4 +1,14 @@
-<div class="container-fluid">
+<div class="container-fluid mt-3"> 
+	<div class="row d-flex flex-row-reverse">
+		<div class="col-4">
+			<form action="" method="post" class="d-flex">
+				<div class="input-group">
+					<input type="search" class="form-control rounded me-2" name="keyword" id="search" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+					<button type="submit" class="btn btn-outline-dark rounded">Search</button>
+				</div>
+			</form>
+		</div>
+	</div>
 	<table class="table table-bordered mt-3">
 		<thead>
 			<tr>
@@ -8,7 +18,7 @@
 				<td class="text-center"><strong>Keterangan</strong></td>
 				<td class="text-center"><strong>Surat Magang</strong></td>
 				<td class="text-center"><strong>Status</strong></td>
-				<td class="text-center"><strong>Ubah Status</strong></td>
+				<td class="text-center" colspan="2"><strong>Aksi</strong></td>
 			</tr>
 		</thead>
 		<tbody>
@@ -24,6 +34,11 @@
 						</a>
 					</td>
 					<td><?= $mhs['status']; ?></td>
+					<td>
+						<a href="<?= base_url("admin/detil2/") . $mhs['nim']; ?>" class="btn btn-sm">
+							<img src="<?= base_url("assets/loupe.png");?>" width="25">
+						</a>
+					</td>
 					<td>
 						<a href="<?= base_url("admin/ubah/") . $mhs['nim']; ?>" class="btn btn-sm">
 							<img src="<?= base_url("assets/edit.png"); ?>" width="25">

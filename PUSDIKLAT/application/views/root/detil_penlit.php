@@ -25,7 +25,7 @@
 					<h5>Kartu Hasil Studi</h5>
 					<a href="<?= base_url("root/getKhsPenelitian/") . $penelitian['id_penelitian']; ?>"><?= $penelitian['khs']; ?></a>
 					<p></p>
-				<a href="<?= base_url("root/penelitian/"); ?>" class="btn btn-primary float-end">Kembali</a>
+					<a href="<?= base_url("root/penelitian/"); ?>" class="btn btn-primary float-end">Kembali</a>
 				</div>
 			</div>
 		</div>

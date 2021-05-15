@@ -37,7 +37,7 @@
 							<label for="tanggal_keluar">Tanggal Keluar</label>
 							<input type="date" name="tanggal_keluar" class="form-control" id="tanggal_keluar" value="<?= $mahasiswa['tanggal_keluar']; ?>">
 						</div>
-						<button href="<?= base_url("root/index/"); ?>" class="btn btn-secondary mt-3">Kembali</button>
+						<a href="<?= base_url("root/index/"); ?>" class="btn btn-secondary mt-3">Kembali</a>
 						<button type="submit" name="ubah" class="btn btn-primary mt-3 float-end">Simpan</button>
 					</form>
 				</div>

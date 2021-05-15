@@ -22,16 +22,7 @@
 					<p class="card-text"><?= $mahasiswa['status']; ?></p>
 					<h5>Keterangan Status</h5>
 					<p class="card-text"><?= $mahasiswa['keterangan']; ?></p>
-					<h5>Tanggal Masuk</h5>
-					<p class="card-text"><?= $mahasiswa['tanggal_masuk']; ?></p>
-					<h5>Tanggal Keluar</h5>
-					<p class="card-text"><?= $mahasiswa['tanggal_keluar']; ?></p>
-					<h5>Kartu Hasil Studi</h5>
-					<a href="<?= base_url("root/getKhs/") . $mahasiswa['nim']; ?>"><?= $mahasiswa['khs']; ?></a>
-					<h5>Surat Permohonan Magang</h5>
-					<a href="<?= base_url("root/getSuratMagang/") . $mahasiswa['nim']; ?>"><?= $mahasiswa['surat_magang']; ?></a>
-					<p></p>
-					<a href="<?= base_url("root/index/"); ?>" class="btn btn-primary float-end">Kembali</a>
+					<a href="<?= base_url("admin/index/"); ?>" class="btn btn-primary float-end">Kembali</a>
 				</div>
 			</div>
 		</div>
