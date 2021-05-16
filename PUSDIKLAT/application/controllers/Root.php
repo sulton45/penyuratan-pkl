@@ -290,7 +290,7 @@ class Root extends CI_Controller
 			$pdf->Ln(5);
 			// MultiCell($w, $h, $txt, $border=0, $align='J', $fill=0, $ln=1, $x='', $y='', $reseth=true, $stretch=0, $ishtml=false, $autopadding=true, $maxh=0)
 			$pdf->MultiCell(19, 1, "", 0, 'J', 0, 0, '', '', true, 0, false, true, 40);
-			$pdf->MultiCell(160, 1, "Menindaklanjuti Surat Saudara Nomor " . $data_surat->no_surat . " tanggal " . date_indo($data_surat->tglsurat_pemohon) . " dengan ini disampaikan bahwa kami bersedia menerima " . "Mahasiswa" . " Saudara yaitu:", 0, 'L', 0, 0, '', '', true, 0, false, true, 40);
+			$pdf->MultiCell(160, 1, "Menindaklanjuti Surat Saudara Nomor " . $data_surat->no_surat . " tanggal " . date_indo($data_surat->tglsurat_pemohon) . " dengan ini disampaikan bahwa kami bersedia menerima mahasiswa Saudara yaitu : ", 0, 'L', 0, 0, '', '', true, 0, false, true, 40);
 			$pdf->MultiCell(10, 1, "", 0, 'J', 0, 1, '', '', true, 0, false, true, 40);
 
 			$pdf->Ln(7);
@@ -311,7 +311,7 @@ class Root extends CI_Controller
 
 			$pdf->Ln(3);
 			$pdf->MultiCell(19, 1, "", 0, 'J', 0, 0, '', '', true, 0, false, true, 40);
-			$pdf->MultiCell(160, 1, "Untuk melakukan program magang di Pusat Pendidikan dan Pelatihan, Perpustakaan Nasional RI, yang dilaksanakan dengan memperhatikan protokol kesehatan yang berlaku. Pelaksanaan program magang berlangsung sejak "  . " s.d "  .  ".", 0, 'L', 0, 0, '', '', true, 0, false, true, 40);
+			$pdf->MultiCell(160, 1, "Untuk melakukan pengambilan data di Pusat Pendidikan dan Pelatihan, Perpustakaan Nasional RI, dalam rangka menyelesaikan " . $data_surat->tujuan_penelitian . " yang dilaksanakan dengan memperhatikan protokol kesehatan yang berlaku.", 0, 'L', 0, 0, '', '', true, 0, false, true, 40);
 			$pdf->MultiCell(10, 1, "", 0, 'J', 0, 1, '', '', true, 0, false, true, 40);
 
 			$pdf->Ln(13);
@@ -335,7 +335,7 @@ class Root extends CI_Controller
 			$pdf->Cell(189, 1, '2. Sekretaris Utama Perpustakaan Nasional RI', 0, 1);
 
 
-			$pdf->Output('Surat_Jawaban_Magang_' . $data_surat->nama . '.pdf', 'I');
+			$pdf->Output('Surat_Jawaban_Penelitian_' . $data_surat->nama . '.pdf', 'I');
 		}
 	}
 }
