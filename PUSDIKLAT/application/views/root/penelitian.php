@@ -50,6 +50,11 @@
 							<img src="<?= base_url("assets/printer.png"); ?>" width="25" data-toggle="tooltip" title="Print Surat">
 						</a>
 					</td>
+					<td>
+						<a href="<?= base_url("root/pdf3/") . $p['id_penelitian']; ?>" target="_blank">
+							<img src="<?= base_url("assets/printer.png"); ?>" width="25" data-toggle="tooltip" title="Print Surat">
+						</a>
+					</td>
 				</tr>
 			<?php endforeach; ?>
 		</tbody>
