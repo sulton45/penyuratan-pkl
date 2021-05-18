@@ -394,7 +394,7 @@ class Root extends CI_Controller
 
 			$pdf->Ln(3);
 			$pdf->MultiCell(19, 1, "", 0, 'J', 0, 0, '', '', true, 0, false, true, 40);
-			$pdf->MultiCell(160, 1, "Untuk dapat dibantu dan difasilitasi dalam melaksanakan pengambilan data penelitian melalui " . /*Tempat Panggil Metode Penelitian */ ", dalam rangka penelitian " . $data_surat->tujuan_penelitian . ", sesuai dengan protokol kesehatan yang berlaku.", 0, 'L', 0, 0, '', '', true, 0, false, true, 40);
+			$pdf->MultiCell(160, 1, "Untuk dapat dibantu dan difasilitasi dalam melaksanakan pengambilan data penelitian melalui " . $data_surat->metode_ambil_data . ", dalam rangka penelitian " . $data_surat->tujuan_penelitian . ", sesuai dengan protokol kesehatan yang berlaku.", 0, 'L', 0, 0, '', '', true, 0, false, true, 40);
 			$pdf->MultiCell(10, 1, "", 0, 'J', 0, 1, '', '', true, 0, false, true, 40);
 
 			$pdf->Ln(13);

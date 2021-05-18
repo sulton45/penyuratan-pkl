@@ -83,7 +83,6 @@ class Root_model extends CI_Model
 		$nim = $this->input->post('nim', true);
 		$no_surat_balasan = $this->input->post('no_surat_balasan', true);
 		$jumlah_lampiran = $this->input->post('jumlah_lampiran', true);
-		$hal_surat = $this->input->post('hal_surat', true);
 		$tgl_dibuat = $this->input->post('tgl_dibuat', true);
 		$kepada = $this->input->post('kepada', true);
 		$instansi = $this->input->post('instansi', true);
@@ -100,7 +99,6 @@ class Root_model extends CI_Model
 		$data = array(
 			'no_surat_balasan' => $no_surat_balasan,
 			'jumlah_lampiran' => $jumlah_lampiran,
-			'hal_surat' => $hal_surat,
 			'tgl_dibuat' => $tgl_dibuat,
 			'kepada' => $kepada,
 			'instansi' => $instansi,
@@ -133,6 +131,7 @@ class Root_model extends CI_Model
 		$tujuan_daerah = $this->input->post('tujuan_daerah', true);
 		$tglsurat_pemohon = $this->input->post('tglsurat_pemohon', true);
 		$tujuan_penelitian = $this->input->post('tujuan_penelitian', true);
+		$metode_ambil_data = $this->input->post('metode_ambil_data', true);
 
 
 		$data = array(
@@ -147,6 +146,7 @@ class Root_model extends CI_Model
 			'tujuan_daerah' => $tujuan_daerah,
 			'tglsurat_pemohon' => $tglsurat_pemohon,
 			'tujuan_penelitian' => $tujuan_penelitian,
+			'metode_ambil_data' => $metode_ambil_data,
 		);
 		$this->db->where('id_penelitian', $id_penelitian);
 		$this->db->update('penelitian', $data);

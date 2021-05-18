@@ -45,15 +45,29 @@
 							<img src="<?= base_url("assets/email.png"); ?>" width="25" data-toggle="tooltip" title="Buat Data Surat">
 						</a>
 					</td>
+
 					<td>
-						<a href="<?= base_url("root/pdf2/") . $p['id_penelitian']; ?>" target="_blank">
+						<!-- Button trigger modal -->
+						<button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#exampleModal">
 							<img src="<?= base_url("assets/printer.png"); ?>" width="25" data-toggle="tooltip" title="Print Surat">
-						</a>
-					</td>
-					<td>
-						<a href="<?= base_url("root/pdf3/") . $p['id_penelitian']; ?>" target="_blank">
-							<img src="<?= base_url("assets/printer.png"); ?>" width="25" data-toggle="tooltip" title="Print Surat">
-						</a>
+						</button>
+
+						<!-- Modal -->
+						<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title w-100" id="exampleModalLabel" style="text-align:center">Pilih Jenis Surat</h5>
+										<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+									</div>
+									<div class="modal-body">
+										<a class="btn btn-primary w-100" href="<?= base_url("root/pdf2/") . $p['id_penelitian']; ?>" target="_blank" role="button">Surat Untuk Pemohon</a>
+										<a class="btn btn-secondary w-100" href="<?= base_url("root/pdf3/") . $p['id_penelitian']; ?>" target="_blank" role="button">Surat Untuk Kepala Pusat</a>
+									</div>
+
+								</div>
+							</div>
+						</div>
 					</td>
 				</tr>
 			<?php endforeach; ?>
