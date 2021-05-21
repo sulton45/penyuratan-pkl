@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 21, 2021 at 10:14 AM
+-- Generation Time: May 21, 2021 at 04:36 PM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -82,6 +82,7 @@ CREATE TABLE `mahasiswa` (
 --
 
 INSERT INTO `mahasiswa` (`nim`, `nama`, `instansi`, `prodi`, `no_telp`, `email`, `khs`, `semester`, `unit`, `ketentuan`, `no_surat`, `surat_magang`, `tanggal_masuk`, `tanggal_keluar`, `status`, `keterangan`, `no_surat_balasan`, `jumlah_lampiran`, `tgl_dibuat`, `kepada`, `tujuan_daerah`, `tglsurat_pemohon`, `nama2`, `nim2`, `nama3`, `nim3`) VALUES
+(1512618078, 'Sulton Ibrahim', 'Universitas Negeri Jakarta', 'Pendidikan Informatika', '14045', 'sultonibrahim11@gmail.com', '302-949-1-PB.pdf', 6, 'Biro SDM dan Umum', 'Kerja Praktik', '1400044', 'Form_Pengisian_Permohonan_(Kelompok)_Observasi_dan_PKL.pdf', '2021-05-21', '2021-05-31', '', '', '1110/2211/bbbc', '-', '2021-05-21', 'Rektor UNJ', 'Jakarta', '2021-05-01', 'Sandi Pratama', '14045', 'Budi Pekerti', '14044'),
 (1810512028, 'Nurul Aini', 'Universitas Pembangunan Nasional Veteran Jakarta', 'Sistem Informasi', '0813', 'nurula@upnvj.ac.id', 'KHS-1810512028-12022021.pdf', 6, 'Inspektorat', 'Kerja Praktik', 'B/268UN61/FIK/2021', 'SURAT_KP-NURUL_AINI_DAN_YULI_F.pdf', '2021-05-08', '2021-06-05', 'Terima', '', '1110/2211/bbbcasd', '-', '2021-05-12', 'Rektor UPN Jakarta', 'Jakarta', '2021-05-31', 'Sandi Pratama', '14045', 'Budi Pekerti', '14044');
 
 -- --------------------------------------------------------

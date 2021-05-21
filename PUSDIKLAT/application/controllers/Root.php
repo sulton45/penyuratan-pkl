@@ -182,7 +182,7 @@ class Root extends CI_Controller
 			$pdf->Cell(19, 1, "", 0, 0,);
 			$pdf->Cell(170, 1, "" . $data_surat->instansi, 0, 1,);
 			$pdf->Cell(19, 1, "", 0, 0,);
-			$pdf->Cell(170, 1, "" . $data_surat->tujuan_daerah, 0, 1,);
+			$pdf->Cell(170, 1, "Di " . $data_surat->tujuan_daerah, 0, 1,);
 
 			$pdf->Ln(7);
 			$pdf->Cell(19, 1, "", 0, 0,);
@@ -229,7 +229,7 @@ class Root extends CI_Controller
 
 			$pdf->Ln(3);
 			$pdf->MultiCell(19, 1, "", 0, 'J', 0, 0, '', '', true, 0, false, true, 40);
-			$pdf->MultiCell(160, 1, "Untuk melakukan program magang di Pusat Pendidikan dan Pelatihan, Perpustakaan Nasional RI, yang dilaksanakan dengan memperhatikan protokol kesehatan yang berlaku. Pelaksanaan program magang berlangsung sejak " .  date_indo($data_surat->tanggal_masuk) . " s.d " . date_indo($data_surat->tanggal_keluar) .  ".", 0, 'L', 0, 0, '', '', true, 0, false, true, 40);
+			$pdf->MultiCell(160, 1, "Untuk melakukan program magang di " . $data_surat->unit . ", Perpustakaan Nasional RI, yang dilaksanakan dengan memperhatikan protokol kesehatan yang berlaku. Pelaksanaan program magang berlangsung sejak " .  date_indo($data_surat->tanggal_masuk) . " s.d " . date_indo($data_surat->tanggal_keluar) .  ".", 0, 'L', 0, 0, '', '', true, 0, false, true, 40);
 			$pdf->MultiCell(10, 1, "", 0, 'J', 0, 1, '', '', true, 0, false, true, 40);
 
 			$pdf->Ln(13);
@@ -281,7 +281,7 @@ class Root extends CI_Controller
 			$pdf->Cell(19, 1, "", 0, 0,);
 			$pdf->Cell(170, 1, "" . $data_surat->instansi, 0, 1,);
 			$pdf->Cell(19, 1, "", 0, 0,);
-			$pdf->Cell(170, 1, "" . $data_surat->tujuan_daerah, 0, 1,);
+			$pdf->Cell(170, 1, "Di " . $data_surat->tujuan_daerah, 0, 1,);
 
 			$pdf->Ln(7);
 			$pdf->Cell(19, 1, "", 0, 0,);
@@ -364,7 +364,7 @@ class Root extends CI_Controller
 			$pdf->Cell(19, 1, "", 0, 0,);
 			$pdf->Cell(170, 1, "Perpustakaan Nasional RI", 0, 1,);
 			$pdf->Cell(19, 1, "", 0, 0,);
-			$pdf->Cell(170, 1, "Di Jakarta" . $data_surat->tujuan_daerah, 0, 1,);
+			$pdf->Cell(170, 1, "Di " . $data_surat->tujuan_daerah, 0, 1,);
 
 			$pdf->Ln(7);
 			$pdf->Cell(19, 1, "", 0, 0,);

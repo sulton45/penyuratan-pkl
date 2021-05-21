@@ -48,7 +48,7 @@
 
 
 					<td>
-						<div class="dropdown show">
+						<div class="dropdown show dropleft">
 							<a class="btn btn-light dropdown-toggle" href="<?= base_url("root/pdf2/") . $p['id_penelitian']; ?>" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								<img src="<?= base_url("assets/printer.png"); ?>" width="25" data-toggle="tooltip" title="Print Surat">
 							</a>
