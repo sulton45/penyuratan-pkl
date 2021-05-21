@@ -48,15 +48,24 @@ class Admin extends CI_Controller
 
 	public function ubahStatus()
 	{
+		$this->session->set_flashdata('flashMessage', 'Berhasil Diubah');
 		$this->Admin_model->editStatus();
 		redirect('admin/index');
 	}
 
-	function download($id)
+	function getSuratMagang($id)
 	{
 		$this->load->helper('download');
 		$data = $this->Admin_model->getMahasiswaById($id);
 		force_download('surat_magang/' . $data['surat_magang'], NULL);
+		redirect('admin/index');
+	}
+
+	function getKHS($id)
+	{
+		$this->load->helper('download');
+		$data = $this->Admin_model->getMahasiswaById($id);
+		force_download('khs/' . $data['khs'], NULL);
 		redirect('admin/index');
 	}
 }

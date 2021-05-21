@@ -1,4 +1,13 @@
-<div class="container-fluid mt-3"> 
+<?php if ($this->session->flashdata('flashMessage') == TRUE) : ?>
+	<div class="alert alert-success alert-dismissible fade show" role="alert">
+		<p>
+			<?php echo $this->session->flashdata('flashMessage'); ?>
+		</p>
+		<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+	</div>
+<?php endif; ?>
+
+<div class="container-fluid mt-3">
 	<div class="row d-flex flex-row-reverse">
 		<div class="col-4">
 			<form action="" method="post" class="d-flex">
@@ -29,19 +38,19 @@
 					<td><?= $mhs['unit']; ?></td>
 					<td><?= $mhs['ketentuan']; ?></td>
 					<td>
-						<a href="<?= base_url("admin/download/") . $mhs['nim']; ?>">
+						<a href="<?= base_url("admin/getSuratMagang/") . $mhs['nim']; ?>">
 							<?= $mhs['surat_magang']; ?>
 						</a>
 					</td>
 					<td><?= $mhs['status']; ?></td>
 					<td>
 						<a href="<?= base_url("admin/detil2/") . $mhs['nim']; ?>" class="btn btn-sm">
-							<img src="<?= base_url("assets/loupe.png");?>" width="25">
+							<img src="<?= base_url("assets/loupe.png");?>" width="25" data-toggle="tooltip" title="Detil Data Mahasiswa">
 						</a>
 					</td>
 					<td>
 						<a href="<?= base_url("admin/ubah/") . $mhs['nim']; ?>" class="btn btn-sm">
-							<img src="<?= base_url("assets/edit.png"); ?>" width="25">
+							<img src="<?= base_url("assets/edit.png"); ?>" width="25" data-toggle="tooltip" title="Ubah Data Mahasiswa">
 						</a>
 					</td>
 				</tr>

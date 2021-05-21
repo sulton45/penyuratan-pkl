@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 18, 2021 at 06:25 PM
--- Server version: 10.4.18-MariaDB
--- PHP Version: 8.0.3
+-- Generation Time: May 20, 2021 at 10:37 PM
+-- Server version: 10.4.16-MariaDB
+-- PHP Version: 7.4.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -82,7 +82,6 @@ CREATE TABLE `mahasiswa` (
 --
 
 INSERT INTO `mahasiswa` (`nim`, `nama`, `instansi`, `prodi`, `no_telp`, `email`, `khs`, `semester`, `unit`, `ketentuan`, `no_surat`, `surat_magang`, `tanggal_masuk`, `tanggal_keluar`, `status`, `keterangan`, `no_surat_balasan`, `jumlah_lampiran`, `tgl_dibuat`, `kepada`, `tujuan_daerah`, `tglsurat_pemohon`, `nama2`, `nim2`, `nama3`, `nim3`) VALUES
-(1234, 'sandii', 'univ a', 'Sistem Informasi', '', 'aininurul.agustus@gmail.com', 'KHS-1810512028-120220212.pdf', 6, 'Biro Perencanaan dan Keuangan', 'Kerja Praktik', 'B/268UN61/FIK/2021', 'SERTIFIKAT_SENAMIKA_0448-0448.pdf', '2021-05-14', '2021-05-31', 'Tolak', '', '1110/2211/bbbc', '-', '2021-05-14', 'Rektor UNJ', 'Jakarta', '2021-05-01', 'Sandi Pratama', '1512618046', 'Adi Cahyadi', '14044'),
 (1810512028, 'Nurul Aini', 'Universitas Pembangunan Nasional Veteran Jakarta', 'Sistem Informasi', '0813', 'nurula@upnvj.ac.id', 'KHS-1810512028-12022021.pdf', 6, 'Inspektorat', 'Kerja Praktik', 'B/268UN61/FIK/2021', 'SURAT_KP-NURUL_AINI_DAN_YULI_F.pdf', '2021-05-08', '2021-06-05', 'Terima', '', '1110/2211/bbbcasd', '-', '2021-05-12', 'Rektor UPN Jakarta', 'Jakarta', '2021-05-31', 'Hehe Gini', '14045', 'sss', '14044');
 
 -- --------------------------------------------------------
@@ -122,9 +121,7 @@ CREATE TABLE `penelitian` (
 --
 
 INSERT INTO `penelitian` (`id_penelitian`, `nama`, `nim`, `no_surat`, `instansi`, `prodi`, `no_telp`, `email`, `nama_dosen`, `no_telp_dosen`, `email_dosen`, `judul`, `abstrak`, `khs`, `no_surat_penelitian`, `surat_penelitian`, `jumlah_lampiran`, `tgl_dibuat`, `kepada`, `tujuan_daerah`, `tglsurat_pemohon`, `tujuan_penelitian`, `metode_ambil_data`) VALUES
-(3, 'Rania Ramadhinaaaaa', '1810512025', '99999999', 'Universitas Pembangunan Nasional Veteran Jakarta', 'Sistem Informasi', '085', 'raniarupnvj@ac.id', 'Ati Zaidiah', '089', 'aininurul.agustus@gmail.com', 'Pengaruh pengaruh', 'dsfbjasdfnijaefn 0293nr8', 'KHS-1810512028-12022021.pdf', '4r43f', 'Surat_Pernyataan_Magang_Nurul_Yuli.pdf', '-', '2021-05-15', 'Rektor UPN Jakarta', 'Jakarta', '2021-05-01', 'Tugas Akhir', 'Kuisioner dengan link'),
-(4, 'Yuli Febyola', '345', '13311', 'UPN', 'Sistem Informasi', '089', 'yuli@gmail.com', 'Ati Zaidiah', '089', 'aininurul.agustus@gmail.com', 'iubibibpbp', 'bihbhuhluhuhuhjiu', 'KHS-1810512028-12022021.pdf', '7YH8UH8H8', 'SURAT_KP-NURUL_AINI_DAN_YULI_F.pdf', '1', '2021-05-15', 'Rektor UPN Jakarta', 'Jakarta', '2021-05-31', 'Untuk tugas', ''),
-(5, 'nuraini azizi', '456', '', 'Universitas Pembangunan Nasional Veteran Jakarta', 'Sistem Informasi', '085', 'nurula@upnvj.ac.id', 'Ati Zaidiah', '087', 'aininurul.agustus@gmail.com', 'bfndjisabfbjsdhbf', 'hhfityfyjyciycycytfyt', 'KHS-1810512028-1202202111.pdf', 'b089', 'SURAT_KP-NURUL_AINI_DAN_YULI_F1.pdf', '', '0000-00-00', '', '', '0000-00-00', '', '');
+(5, 'nuraini azizi', '456', '', 'Universitas Pembangunan Nasional Veteran Jakarta', 'Sistem Informasi', '085', 'nurula@upnvj.ac.id', 'Ati Zaidiah', '087', 'aininurul.agustus@gmail.com', 'bfndjisabfbjsdhbf', 'hhfityfyjyciycycytfyt', 'KHS-1810512028-1202202111.pdf', 'b089', 'SURAT_KP-NURUL_AINI_DAN_YULI_F1.pdf', '', '2021-05-19', '', '', '2021-06-05', '', '');
 
 --
 -- Indexes for dumped tables
@@ -156,7 +153,7 @@ ALTER TABLE `penelitian`
 -- AUTO_INCREMENT for table `penelitian`
 --
 ALTER TABLE `penelitian`
-  MODIFY `id_penelitian` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_penelitian` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

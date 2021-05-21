@@ -38,7 +38,7 @@
 				<td class="text-center"><strong>Keterangan Status</strong></td>
 				<td class="text-center"><strong>Tanggal Masuk</strong></td>
 				<td class="text-center"><strong>Tanggal Keluar</strong></td>
-				<td class="text-center" colspan="4"><strong>Aksi</strong></td>
+				<td class="text-center" colspan="5"><strong>Aksi</strong></td>
 			</tr>
 		</thead>
 		<tbody>
@@ -54,7 +54,7 @@
 					<td><?= date_indo($mhs['tanggal_masuk']); ?></td>
 					<td><?= date_indo($mhs['tanggal_keluar']); ?></td>
 					<td>
-						<a href="<?= base_url("root/detil/") . $mhs['nim']; ?>" class="btn btn-sm"><img src="<?= base_url("assets/loupe.png"); ?>" width="25" data-toggle="tooltip" title="Detail Data Mahasiswa"></a>
+						<a href="<?= base_url("root/detil/") . $mhs['nim']; ?>" class="btn btn-sm"><img src="<?= base_url("assets/loupe.png"); ?>" width="25" data-toggle="tooltip" title="Detil Data Mahasiswa"></a>
 					</td>
 					<td>
 						<a href="<?= base_url("root/ubah/") . $mhs['nim']; ?>" class="btn btn-sm" data-toggle="tooltip" title="Ubah Data Mahasiswa">
@@ -69,7 +69,7 @@
 
 					<td>
 						<a href="<?= base_url("root/pdf/") . $mhs['nim']; ?>" class="btn btn-sm" target="_blank">
-							<img src="<?= base_url("assets/printer.png"); ?>" width="25" data-toggle="tooltip" title="Print Surat">
+							<img src="<?= base_url("assets/printer.png"); ?>" width="25" data-toggle="tooltip" title="Cetak Surat">
 					</td>
 					<td>
 						<a href="<?= base_url("root/hapus/") . $mhs['nim'] . "/" . $mhs['surat_magang'] . "/" . $mhs['khs']; ?>" class="btn btn-sm " data-toggle="tooltip" title="Hapus Data" onclick="return confirm(`Yakin ingin menghapus?`)">

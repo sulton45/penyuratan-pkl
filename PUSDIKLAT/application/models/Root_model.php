@@ -131,7 +131,6 @@ class Root_model extends CI_Model
 		$tujuan_daerah = $this->input->post('tujuan_daerah', true);
 		$tglsurat_pemohon = $this->input->post('tglsurat_pemohon', true);
 		$tujuan_penelitian = $this->input->post('tujuan_penelitian', true);
-		$metode_ambil_data = $this->input->post('metode_ambil_data', true);
 
 
 		$data = array(
@@ -146,7 +145,6 @@ class Root_model extends CI_Model
 			'tujuan_daerah' => $tujuan_daerah,
 			'tglsurat_pemohon' => $tglsurat_pemohon,
 			'tujuan_penelitian' => $tujuan_penelitian,
-			'metode_ambil_data' => $metode_ambil_data,
 		);
 		$this->db->where('id_penelitian', $id_penelitian);
 		$this->db->update('penelitian', $data);

@@ -87,6 +87,7 @@ class Penelitian extends CI_Controller
             'surat_penelitian' => $surat_penelitian,
             'khs' => $khs
         );
+        $this->session->set_flashdata('flashMessage', 'Pendaftaran Berhasil!');
         $this->penelitian_model->tambahDataPenelitian($data);
         redirect('home/penelitian');
     }

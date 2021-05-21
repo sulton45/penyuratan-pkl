@@ -3,20 +3,15 @@
 		<div class="card-header text-center"><h4><strong>Form Pendaftaran Program Magang</strong></h4>
 		</div>
 		<div class="card-body">
-			<ul class="list-unstyled">
-				<li>This is a list.</li>
-				<li>It appears completely unstyled.</li>
-				<li>Structurally, it's still a list.</li>
-				<li>However, this style only applies to immediate child elements.</li>
-				<li>Nested lists:
-					<ul>
-						<li>are unaffected by this style</li>
-						<li>will still show a bullet</li>
-						<li>and have appropriate left margin</li>
-					</ul>
-				</li>
-				<li>This may still come in handy in some situations.</li>
-			</ul>
+			<ol class="list-unstyled">
+				Syarat dan Ketentuan Pendaftaran Kerja Praktik atau Perogram Kampus Merdeka:
+				<ol>
+					<li>Pendaftar merupakan mahasiswa aktif.</li>
+					<li>Memiliki alamat email serta nomor telepon aktif yang dapat dihubungi.</li>
+					<li>Mengisi data dengan benar.</li>
+					<li>Mengunggah dokumen yang dibutuhkan.</li>
+				</ol>
+			</ol>
 			<div class="dropdown-divider"></div>
 			<form action="<?= base_url("magang/tambahDataMagang"); ?>" method="post" enctype="multipart/form-data">
 				<div class="form-group">

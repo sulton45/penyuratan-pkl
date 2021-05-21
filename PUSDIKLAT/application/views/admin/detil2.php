@@ -18,6 +18,10 @@
 					<p class="card-text"><?= $mahasiswa['unit']; ?></p>
 					<h5>Keterangan Magang</h5>
 					<p class="card-text"><?= $mahasiswa['ketentuan']; ?></p>
+					<h5>Kartu Hasil Studi</h5>
+					<a href="<?= base_url("admin/getKHS/") . $mahasiswa['nim']; ?>"><?= $mahasiswa['khs']; ?></a>
+					<h5>Surat Permohonan Magang</h5>
+					<a href="<?= base_url("admin/getSuratMagang/") . $mahasiswa['nim']; ?>"><?= $mahasiswa['surat_magang']; ?></a>
 					<h5>Status Magang</h5>
 					<p class="card-text"><?= $mahasiswa['status']; ?></p>
 					<h5>Keterangan Status</h5>

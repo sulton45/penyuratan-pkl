@@ -21,6 +21,7 @@
 						<div class="form-group">
 							<label for="status">Status Magang</label>
 							<select class="form-select" name="status" id="status">
+								<option>---PILIH---</option>
 								<?php foreach ($status as $status) : ?>
 									<?php if ($status == $mahasiswa['status']) : ?>
 										<option value="<?= $status; ?>" selected><?= $status; ?></option>
@@ -34,8 +35,8 @@
 							<label for="keterangan">Keterangan Status</label>
 							<textarea class="form-control" name="keterangan" id="floatingTextarea2" style="height: 100px"><?= $mahasiswa['keterangan']; ?></textarea>
 						</div>
-						<button href="<?= base_url("admin/index/"); ?>" class="btn btn-secondary mt-3">Kembali</button>
-						<button type="submit" name="" class="btn btn-primary mt-3 float-end">Simpan</button>
+						<a href="<?= base_url("admin/index/"); ?>" class="btn btn-secondary mt-3">Kembali</a>
+						<button type="submit" name="ubah" class="btn btn-primary mt-3 float-end">Simpan</button>
 					</form>
 				</div>
 			</div>
