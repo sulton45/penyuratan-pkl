@@ -25,7 +25,7 @@
 				<td class="text-center"><strong>Asal Instansi</strong></td>
 				<td class="text-center"><strong>Judul Penelitian</strong></td>
 				<td class="text-center"><strong>Abstrak</strong></td>
-				<td class="text-center" colspan="3"><strong>Aksi</strong></td>
+				<td class="text-center" colspan="4"><strong>Aksi</strong></td>
 			</tr>
 		</thead>
 		<tbody>
@@ -37,7 +37,7 @@
 					<td><?= $p['abstrak']; ?></td>
 					<td>
 						<a href="<?= base_url("root/detilPenelitian/") . $p['id_penelitian']; ?>" class="btn btn-sm">
-							<img src="<?= base_url("assets/loupe.png"); ?>" width="25" data-toggle="tooltip" title="Detil Data Mahasiswa">
+							<img src="<?= base_url("assets/loupe.png"); ?>" width="25" data-toggle="tooltip" title="Detail Data Mahasiswa">
 						</a>
 					</td>
 					<td>
@@ -45,10 +45,15 @@
 							<img src="<?= base_url("assets/email.png"); ?>" width="25" data-toggle="tooltip" title="Buat Data Surat">
 						</a>
 					</td>
+
 					<td>
-						<a href="<?= base_url("root/pdf2/") . $p['id_penelitian']; ?>" target="_blank">
-							<img src="<?= base_url("assets/printer.png"); ?>" width="25" data-toggle="tooltip" title="Cetak Surat">
-						</a>
+						<a href="<?= base_url("root/pdf2/") . $p['id_penelitian']; ?>" class="btn btn-sm" target="_blank">
+							<img src="<?= base_url("assets/printer.png"); ?>" width="25" data-toggle="tooltip" title="Print Surat Untuk Pemohon">
+					</td>
+
+					<td>
+						<a href="<?= base_url("root/pdf3/") . $p['id_penelitian']; ?>" class="btn btn-sm" target="_blank">
+							<img src="<?= base_url("assets/printer.png"); ?>" width="25" data-toggle="tooltip" title="Print Surat Untuk Kepala Pusat">
 					</td>
 				</tr>
 			<?php endforeach; ?>
