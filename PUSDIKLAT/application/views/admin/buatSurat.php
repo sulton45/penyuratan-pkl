@@ -21,11 +21,6 @@
 							<label for="jumlah_lampiran">Jumlah Lampiran</label>
 							<input type="text" name="jumlah_lampiran" class="form-control" id="jumlah_lampiran" value="<?= $mahasiswa['jumlah_lampiran']; ?>">
 						</div>
-						
-						<div class="form-group">
-							<label for="tgl_dibuat">Tanggal Surat Dibuat</label>
-							<input type="date" name="tgl_dibuat" class="form-control" id="tgl_dibuat" value="<?= $mahasiswa['tgl_dibuat']; ?>">
-						</div>
 						<div class="form-group">
 							<label for="kepada">Kepada</label>
 							<input type="text" name="kepada" class="form-control" id="kepada" value="<?= $mahasiswa['kepada']; ?>">

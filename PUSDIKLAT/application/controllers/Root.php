@@ -174,7 +174,7 @@ class Root extends CI_Controller
 			$pdf->Cell(155, 1, "Nomor     : " . $data_surat->no_surat_balasan, 0, 0,);
 			$pdf->Cell(34, 1, date_indo($data_surat->tgl_dibuat), 0, 1,);
 			$pdf->Cell(189, 1, "Lampiran : " . $data_surat->jumlah_lampiran, 0, 1,);
-			$pdf->Cell(189, 1, "Hal           : Permohonan Magang/PKL", 0, 1,);
+			$pdf->Cell(189, 1, "Hal           : " . $data_surat->hal_surat, 0, 1,);
 
 			$pdf->Ln(7);
 			$pdf->Cell(189, 1, "Kepada", 0, 1,);
@@ -273,7 +273,7 @@ class Root extends CI_Controller
 			$pdf->Cell(155, 1, "Nomor     : " . $data_surat->no_surat, 0, 0,);
 			$pdf->Cell(34, 1, date_indo($data_surat->tgl_dibuat), 0, 1,);
 			$pdf->Cell(189, 1, "Lampiran : " . $data_surat->jumlah_lampiran, 0, 1,);
-			$pdf->Cell(189, 1, "Hal           : Permohonan Izin Penelitian", 0, 1,);
+			$pdf->Cell(189, 1, "Hal           : " . $data_surat->hal_surat, 0, 1,);
 
 			$pdf->Ln(7);
 			$pdf->Cell(189, 1, "Kepada", 0, 1,);
@@ -356,7 +356,7 @@ class Root extends CI_Controller
 			$pdf->Cell(155, 1, "Nomor     : " . $data_surat->no_surat, 0, 0,);
 			$pdf->Cell(34, 1, date_indo($data_surat->tgl_dibuat), 0, 1,);
 			$pdf->Cell(189, 1, "Lampiran : " . $data_surat->jumlah_lampiran, 0, 1,);
-			$pdf->Cell(189, 1, "Hal           : Permohonan Izin Penelitian", 0, 1,);
+			$pdf->Cell(189, 1, "Hal           : " . $data_surat->hal_surat, 0, 1,);
 
 			$pdf->Ln(7);
 			$pdf->Cell(189, 1, "Kepada", 0, 1,);

@@ -25,7 +25,7 @@
 				<td class="text-center"><strong>Asal Instansi</strong></td>
 				<td class="text-center"><strong>Judul Penelitian</strong></td>
 				<td class="text-center"><strong>Abstrak</strong></td>
-				<td class="text-center" colspan="4"><strong>Aksi</strong></td>
+				<td class="text-center" colspan="3"><strong>Aksi</strong></td>
 			</tr>
 		</thead>
 		<tbody>
@@ -45,14 +45,11 @@
 							<img src="<?= base_url("assets/email.png"); ?>" width="25" data-toggle="tooltip" title="Buat Data Surat">
 						</a>
 					</td>
-
-
 					<td>
 						<div class="dropdown show dropleft">
 							<a class="btn btn-light dropdown-toggle" href="<?= base_url("root/pdf2/") . $p['id_penelitian']; ?>" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								<img src="<?= base_url("assets/printer.png"); ?>" width="25" data-toggle="tooltip" title="Print Surat">
 							</a>
-
 							<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
 								<a class="dropdown-item" href="<?= base_url("root/pdf2/") . $p['id_penelitian']; ?>" class="btn btn-sm" target="_blank">Pemohon</a>
 								<a class="dropdown-item" href="<?= base_url("root/pdf3/") . $p['id_penelitian']; ?>" class="btn btn-sm" target="_blank">Kepala Pusat</a>

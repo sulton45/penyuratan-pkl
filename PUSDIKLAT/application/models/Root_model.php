@@ -81,9 +81,9 @@ class Root_model extends CI_Model
 
 	{
 		$nim = $this->input->post('nim', true);
+		$hal_surat = $this->input->post('hal_surat', true);
 		$no_surat_balasan = $this->input->post('no_surat_balasan', true);
 		$jumlah_lampiran = $this->input->post('jumlah_lampiran', true);
-		$tgl_dibuat = $this->input->post('tgl_dibuat', true);
 		$kepada = $this->input->post('kepada', true);
 		$instansi = $this->input->post('instansi', true);
 		$tujuan_daerah = $this->input->post('tujuan_daerah', true);
@@ -94,12 +94,14 @@ class Root_model extends CI_Model
 		$nim2 = $this->input->post('nim2', true);
 		$nama3 = $this->input->post('nama3', true);
 		$nim3 = $this->input->post('nim3', true);
+		$tanggal_masuk = $this->input->post('tanggal_masuk', true);
+		$tanggal_keluar = $this->input->post('tanggal_keluar', true);
 
 
 		$data = array(
+			'hal_surat' => $hal_surat,
 			'no_surat_balasan' => $no_surat_balasan,
 			'jumlah_lampiran' => $jumlah_lampiran,
-			'tgl_dibuat' => $tgl_dibuat,
 			'kepada' => $kepada,
 			'instansi' => $instansi,
 			'tujuan_daerah' => $tujuan_daerah,
@@ -110,6 +112,8 @@ class Root_model extends CI_Model
 			'nim2' => $nim2,
 			'nama3' => $nama3,
 			'nim3' => $nim3,
+			'tanggal_masuk' => $tanggal_masuk,
+			'tanggal_keluar' => $tanggal_keluar
 		);
 		$this->db->where('nim', $nim);
 		$this->db->update('mahasiswa', $data);
@@ -123,30 +127,34 @@ class Root_model extends CI_Model
 		$nama = $this->input->post('nama', true);
 		$nim = $this->input->post('nim', true);
 		$no_surat = $this->input->post('no_surat', true);
+		$hal_surat = $this->input->post('hal_surat', true);
 		$judul = $this->input->post('judul', true);
 		$jumlah_lampiran = $this->input->post('jumlah_lampiran', true);
-		$tgl_dibuat = $this->input->post('tgl_dibuat', true);
 		$kepada = $this->input->post('kepada', true);
 		$instansi = $this->input->post('instansi', true);
 		$tujuan_daerah = $this->input->post('tujuan_daerah', true);
 		$tglsurat_pemohon = $this->input->post('tglsurat_pemohon', true);
 		$tujuan_penelitian = $this->input->post('tujuan_penelitian', true);
 		$metode_ambil_data = $this->input->post('metode_ambil_data', true);
+		$tanggal_masuk = $this->input->post('tanggal_masuk', true);
+		$tanggal_keluar = $this->input->post('tanggal_keluar', true);
 
 
 		$data = array(
 			'nama' => $nama,
 			'nim' => $nim,
 			'no_surat' => $no_surat,
+			'hal_surat' => $hal_surat,
 			'judul' => $judul,
 			'jumlah_lampiran' => $jumlah_lampiran,
-			'tgl_dibuat' => $tgl_dibuat,
 			'kepada' => $kepada,
 			'instansi' => $instansi,
 			'tujuan_daerah' => $tujuan_daerah,
 			'tglsurat_pemohon' => $tglsurat_pemohon,
 			'tujuan_penelitian' => $tujuan_penelitian,
 			'metode_ambil_data' => $metode_ambil_data,
+			'tanggal_masuk' => $tanggal_masuk,
+			'tanggal_keluar' => $tanggal_keluar
 		);
 		$this->db->where('id_penelitian', $id_penelitian);
 		$this->db->update('penelitian', $data);

@@ -84,7 +84,7 @@ class Magang extends CI_Controller
 			'khs' => $khs
 		);
 		$this->magang_model->tambahDataMagang($data);
-		$this->session->set_flashdata('flashMessage', 'Data Berhasil Ditambahkan');
+		$this->session->set_flashdata('flashMessage', 'Pendaftaran Berhasil');
 		redirect('home/unit');
 	}
 }

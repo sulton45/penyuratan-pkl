@@ -18,12 +18,12 @@
 							<input type="text" name="no_surat_balasan" class="form-control" id="no_surat_balasan" value="<?= $mahasiswa['no_surat_balasan']; ?>">
 						</div>
 						<div class="form-group">
-							<label for="jumlah_lampiran">Jumlah Lampiran</label>
-							<input type="text" name="jumlah_lampiran" class="form-control" id="jumlah_lampiran" value="<?= $mahasiswa['jumlah_lampiran']; ?>">
+							<label for="hal_surat">Hal</label>
+							<input type="text" name="hal_surat" class="form-control" id="hal_surat" value="<?= $mahasiswa['hal_surat']; ?>">
 						</div>
 						<div class="form-group">
-							<label for="tgl_dibuat">Tanggal Surat Dibuat</label>
-							<input type="date" name="tgl_dibuat" class="form-control" id="tgl_dibuat" value="<?= $mahasiswa['tgl_dibuat']; ?>">
+							<label for="jumlah_lampiran">Jumlah Lampiran</label>
+							<input type="text" name="jumlah_lampiran" class="form-control" id="jumlah_lampiran" value="<?= $mahasiswa['jumlah_lampiran']; ?>">
 						</div>
 						<div class="form-group">
 							<label for="kepada">Kepada</label>
@@ -46,6 +46,14 @@
 							<input type="date" name="tglsurat_pemohon" class="form-control" id="tglsurat_pemohon" value="<?= $mahasiswa['tglsurat_pemohon']; ?>">
 						</div>
 						<div class="form-group">
+							<label for="tanggal_masuk">Tanggal Masuk</label>
+							<input type="date" name="tanggal_masuk" class="form-control" id="tanggal_masuk" value="<?= $mahasiswa['tanggal_masuk']; ?>">
+						</div>
+						<div class="form-group">
+							<label for="tanggal_keluar">Tanggal Keluar</label>
+							<input type="date" name="tanggal_keluar" class="form-control" id="tanggal_keluar" value="<?= $mahasiswa['tanggal_keluar']; ?>">
+						</div>
+						<div class="form-group">
 							<label for="nama2">Nama Mahasiswa Anggota</label>
 							<input type="text" name="nama2" class="form-control" id="nama2" value="<?= $mahasiswa['nama2']; ?>">
 						</div>
@@ -62,7 +70,7 @@
 							<input type="number" name="nim3" class="form-control" id="nim3" value="<?= $mahasiswa['nim3']; ?>">
 						</div>
 
-						<button href="<?= base_url("root/index/"); ?>" class="btn btn-secondary mt-3">Kembali</button>
+						<a href="<?= base_url("root/index/"); ?>" class="btn btn-secondary mt-3">Kembali</a>
 						<button type="submit" name="ubah" class="btn btn-primary mt-3 float-end">Simpan</button>
 					</form>
 				</div>

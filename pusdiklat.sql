@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.0.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 21, 2021 at 04:36 PM
--- Server version: 10.4.18-MariaDB
--- PHP Version: 8.0.3
+-- Waktu pembuatan: 31 Bulan Mei 2021 pada 05.24
+-- Versi server: 10.4.14-MariaDB
+-- Versi PHP: 7.4.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `login`
+-- Struktur dari tabel `login`
 --
 
 CREATE TABLE `login` (
@@ -35,17 +35,17 @@ CREATE TABLE `login` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `login`
+-- Dumping data untuk tabel `login`
 --
 
 INSERT INTO `login` (`id_user`, `username`, `password`, `role`) VALUES
-('01', 'root', 'root', 'root'),
-('02', 'admin', 'admin', 'admin');
+('01', 'Rina_Wahyuni', 'rina123', 'root'),
+('02', 'PUSDIKLAT', 'pusdiklat', 'admin');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mahasiswa`
+-- Struktur dari tabel `mahasiswa`
 --
 
 CREATE TABLE `mahasiswa` (
@@ -59,6 +59,7 @@ CREATE TABLE `mahasiswa` (
   `semester` int(2) NOT NULL,
   `unit` varchar(255) NOT NULL,
   `ketentuan` varchar(100) NOT NULL,
+  `hal_surat` varchar(255) NOT NULL,
   `no_surat` varchar(100) NOT NULL,
   `surat_magang` varchar(100) NOT NULL,
   `tanggal_masuk` date NOT NULL,
@@ -67,7 +68,7 @@ CREATE TABLE `mahasiswa` (
   `keterangan` text NOT NULL,
   `no_surat_balasan` varchar(100) NOT NULL,
   `jumlah_lampiran` varchar(100) NOT NULL,
-  `tgl_dibuat` date NOT NULL,
+  `tgl_dibuat` date NOT NULL DEFAULT current_timestamp(),
   `kepada` varchar(100) NOT NULL,
   `tujuan_daerah` varchar(100) NOT NULL,
   `tglsurat_pemohon` varchar(100) NOT NULL,
@@ -78,17 +79,16 @@ CREATE TABLE `mahasiswa` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `mahasiswa`
+-- Dumping data untuk tabel `mahasiswa`
 --
 
-INSERT INTO `mahasiswa` (`nim`, `nama`, `instansi`, `prodi`, `no_telp`, `email`, `khs`, `semester`, `unit`, `ketentuan`, `no_surat`, `surat_magang`, `tanggal_masuk`, `tanggal_keluar`, `status`, `keterangan`, `no_surat_balasan`, `jumlah_lampiran`, `tgl_dibuat`, `kepada`, `tujuan_daerah`, `tglsurat_pemohon`, `nama2`, `nim2`, `nama3`, `nim3`) VALUES
-(1512618078, 'Sulton Ibrahim', 'Universitas Negeri Jakarta', 'Pendidikan Informatika', '14045', 'sultonibrahim11@gmail.com', '302-949-1-PB.pdf', 6, 'Biro SDM dan Umum', 'Kerja Praktik', '1400044', 'Form_Pengisian_Permohonan_(Kelompok)_Observasi_dan_PKL.pdf', '2021-05-21', '2021-05-31', '', '', '1110/2211/bbbc', '-', '2021-05-21', 'Rektor UNJ', 'Jakarta', '2021-05-01', 'Sandi Pratama', '14045', 'Budi Pekerti', '14044'),
-(1810512028, 'Nurul Aini', 'Universitas Pembangunan Nasional Veteran Jakarta', 'Sistem Informasi', '0813', 'nurula@upnvj.ac.id', 'KHS-1810512028-12022021.pdf', 6, 'Inspektorat', 'Kerja Praktik', 'B/268UN61/FIK/2021', 'SURAT_KP-NURUL_AINI_DAN_YULI_F.pdf', '2021-05-08', '2021-06-05', 'Terima', '', '1110/2211/bbbcasd', '-', '2021-05-12', 'Rektor UPN Jakarta', 'Jakarta', '2021-05-31', 'Sandi Pratama', '14045', 'Budi Pekerti', '14044');
+INSERT INTO `mahasiswa` (`nim`, `nama`, `instansi`, `prodi`, `no_telp`, `email`, `khs`, `semester`, `unit`, `ketentuan`, `hal_surat`, `no_surat`, `surat_magang`, `tanggal_masuk`, `tanggal_keluar`, `status`, `keterangan`, `no_surat_balasan`, `jumlah_lampiran`, `tgl_dibuat`, `kepada`, `tujuan_daerah`, `tglsurat_pemohon`, `nama2`, `nim2`, `nama3`, `nim3`) VALUES
+(1512618046, 'Sandi Pratama', 'Universitas Negeri Jakarta', 'Pendidikan Teknik Informatika dan Komputer', '0895372485447', 'sansan00668@gmail.com', 'KHSsandi1131.pdf', 6, 'Pusat Pendidikan dan Pelatihan', 'Kerja Praktik', 'Permohonan Magang/PKL', '3137/8/pkp.03/4.2021', 'PKL_2580_Sandi_Pratama1.pdf', '2021-06-01', '2021-07-02', 'Terima', 'Memenuhi Kriteria yang dibutuhkan', '12345', '-', '2021-05-31', 'Rektor UNJ', 'Jakarta', '2021-05-31', 'Sulton Ibrahim', '1512618078', '', '');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `penelitian`
+-- Struktur dari tabel `penelitian`
 --
 
 CREATE TABLE `penelitian` (
@@ -106,10 +106,11 @@ CREATE TABLE `penelitian` (
   `judul` varchar(500) NOT NULL,
   `abstrak` text NOT NULL,
   `khs` varchar(500) NOT NULL,
+  `hal_surat` varchar(255) NOT NULL,
   `no_surat_penelitian` varchar(100) NOT NULL,
   `surat_penelitian` varchar(100) NOT NULL,
   `jumlah_lampiran` varchar(100) NOT NULL,
-  `tgl_dibuat` date NOT NULL,
+  `tgl_dibuat` date NOT NULL DEFAULT current_timestamp(),
   `kepada` varchar(100) NOT NULL,
   `tujuan_daerah` varchar(100) NOT NULL,
   `tglsurat_pemohon` date NOT NULL,
@@ -118,44 +119,43 @@ CREATE TABLE `penelitian` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `penelitian`
+-- Dumping data untuk tabel `penelitian`
 --
 
-INSERT INTO `penelitian` (`id_penelitian`, `nama`, `nim`, `no_surat`, `instansi`, `prodi`, `no_telp`, `email`, `nama_dosen`, `no_telp_dosen`, `email_dosen`, `judul`, `abstrak`, `khs`, `no_surat_penelitian`, `surat_penelitian`, `jumlah_lampiran`, `tgl_dibuat`, `kepada`, `tujuan_daerah`, `tglsurat_pemohon`, `tujuan_penelitian`, `metode_ambil_data`) VALUES
-(5, 'nuraini azizi', '456', '1110/2211/bbbc', 'Universitas Pembangunan Nasional Veteran Jakarta', 'Sistem Informasi', '085', 'nurula@upnvj.ac.id', 'Ati Zaidiah', '087', 'aininurul.agustus@gmail.com', 'bfndjisabfbjsdhbf', 'hhfityfyjyciycycytfyt', 'KHS-1810512028-1202202111.pdf', 'b089', 'SURAT_KP-NURUL_AINI_DAN_YULI_F1.pdf', '-', '2021-05-19', 'Rektor UNJ', 'Jakarta', '2021-06-05', 'Tugas Akhir', 'Kuisioner'),
-(8, 'Sulton Ibrahim', '1512618078', '1222', 'Universitas Negeri Jakarta', 'Pendidikan Informatika', '082114045', 'sultonibrahim00@gmail.com', 'Sandi Pratama', '14045', 'sandipratama@gmail.com', 'Pengaruh dari', 'Belum ada', '588-1861-2-PB.pdf', 'B/114004', 'Form_Pengisian_Permohonan_(Kelompok)_Observasi_dan_PKL.pdf', '-', '0000-00-00', 'Rektor UNJ', 'Jakarta', '0000-00-00', 'Tugas Akhir', 'Kuisioner');
+INSERT INTO `penelitian` (`id_penelitian`, `nama`, `nim`, `no_surat`, `instansi`, `prodi`, `no_telp`, `email`, `nama_dosen`, `no_telp_dosen`, `email_dosen`, `judul`, `abstrak`, `khs`, `hal_surat`, `no_surat_penelitian`, `surat_penelitian`, `jumlah_lampiran`, `tgl_dibuat`, `kepada`, `tujuan_daerah`, `tglsurat_pemohon`, `tujuan_penelitian`, `metode_ambil_data`) VALUES
+(12, 'Sandi Pratama', '1512618046', '3137/8/pkp.03/4.2021', 'Universitas Negeri Jakarta', 'Pendidikan Teknik Informatika dan Komputer', '0895372485447', 'sansan00668@gmail.com', 'M. Adiyatma andika suryana', '089123388772', 'M.AdiyatmaUNJ@gmail.com', 'Pengaruh Jaklinko Pada Masyarakat Jakarta Utara', 'Ini Abstrak', 'KHSsandi1132.pdf', 'Permohonan Melakukan Penelitian', '123654647818', 'PKL_2580_Sandi_Pratama.pdf', '-', '2021-05-31', 'Rektor UNJ', 'Jakarta', '2021-05-31', 'Tugas Akhir Skripsi', 'Kuisoner menggunakan Link aaaaaa');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `login`
+-- Indeks untuk tabel `login`
 --
 ALTER TABLE `login`
   ADD PRIMARY KEY (`id_user`);
 
 --
--- Indexes for table `mahasiswa`
+-- Indeks untuk tabel `mahasiswa`
 --
 ALTER TABLE `mahasiswa`
   ADD PRIMARY KEY (`nim`);
 
 --
--- Indexes for table `penelitian`
+-- Indeks untuk tabel `penelitian`
 --
 ALTER TABLE `penelitian`
   ADD PRIMARY KEY (`id_penelitian`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `penelitian`
+-- AUTO_INCREMENT untuk tabel `penelitian`
 --
 ALTER TABLE `penelitian`
-  MODIFY `id_penelitian` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_penelitian` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
