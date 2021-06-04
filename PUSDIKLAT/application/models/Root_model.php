@@ -89,13 +89,14 @@ class Root_model extends CI_Model
 		$tujuan_daerah = $this->input->post('tujuan_daerah', true);
 		$no_surat = $this->input->post('no_surat', true);
 		$tglsurat_pemohon = $this->input->post('tglsurat_pemohon', true);
+		$tgl_dibuat = $this->input->post('tgl_dibuat', true);
+		$tanggal_masuk = $this->input->post('tanggal_masuk', true);
+		$tanggal_keluar = $this->input->post('tanggal_keluar', true);
 		$nama = $this->input->post('nama', true);
 		$nama2 = $this->input->post('nama2', true);
 		$nim2 = $this->input->post('nim2', true);
 		$nama3 = $this->input->post('nama3', true);
 		$nim3 = $this->input->post('nim3', true);
-		$tanggal_masuk = $this->input->post('tanggal_masuk', true);
-		$tanggal_keluar = $this->input->post('tanggal_keluar', true);
 
 
 		$data = array(
@@ -107,13 +108,14 @@ class Root_model extends CI_Model
 			'tujuan_daerah' => $tujuan_daerah,
 			'no_surat' => $no_surat,
 			'tglsurat_pemohon' => $tglsurat_pemohon,
+			'tgl_dibuat' => $tgl_dibuat,
+			'tanggal_masuk' => $tanggal_masuk,
+			'tanggal_keluar' => $tanggal_keluar,
 			'nama' => $nama,
 			'nama2' => $nama2,
 			'nim2' => $nim2,
 			'nama3' => $nama3,
 			'nim3' => $nim3,
-			'tanggal_masuk' => $tanggal_masuk,
-			'tanggal_keluar' => $tanggal_keluar
 		);
 		$this->db->where('nim', $nim);
 		$this->db->update('mahasiswa', $data);
@@ -136,8 +138,6 @@ class Root_model extends CI_Model
 		$tglsurat_pemohon = $this->input->post('tglsurat_pemohon', true);
 		$tujuan_penelitian = $this->input->post('tujuan_penelitian', true);
 		$metode_ambil_data = $this->input->post('metode_ambil_data', true);
-		$tanggal_masuk = $this->input->post('tanggal_masuk', true);
-		$tanggal_keluar = $this->input->post('tanggal_keluar', true);
 
 
 		$data = array(
@@ -153,8 +153,6 @@ class Root_model extends CI_Model
 			'tglsurat_pemohon' => $tglsurat_pemohon,
 			'tujuan_penelitian' => $tujuan_penelitian,
 			'metode_ambil_data' => $metode_ambil_data,
-			'tanggal_masuk' => $tanggal_masuk,
-			'tanggal_keluar' => $tanggal_keluar
 		);
 		$this->db->where('id_penelitian', $id_penelitian);
 		$this->db->update('penelitian', $data);

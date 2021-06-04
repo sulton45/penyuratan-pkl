@@ -172,7 +172,7 @@ class Root extends CI_Controller
 			$pdf->SetFont('times', '', 11);
 			//Cell($w, $h=0, $txt='', $border=0, $ln=0, $align='', $fill=0, $link='', $stretch=0, $ignore_min_height=false, $calign='T', $valign='M')
 			$pdf->Cell(155, 1, "Nomor     : " . $data_surat->no_surat_balasan, 0, 0,);
-			$pdf->Cell(34, 1, date_indo($data_surat->tgl_dibuat), 0, 1,);
+			$pdf->Cell(34, 1, date_indo(date('Y-m-d')), 0, 1,);
 			$pdf->Cell(189, 1, "Lampiran : " . $data_surat->jumlah_lampiran, 0, 1,);
 			$pdf->Cell(189, 1, "Hal           : " . $data_surat->hal_surat, 0, 1,);
 
@@ -271,7 +271,7 @@ class Root extends CI_Controller
 			$pdf->SetFont('times', '', 11);
 			//Cell($w, $h=0, $txt='', $border=0, $ln=0, $align='', $fill=0, $link='', $stretch=0, $ignore_min_height=false, $calign='T', $valign='M')
 			$pdf->Cell(155, 1, "Nomor     : " . $data_surat->no_surat, 0, 0,);
-			$pdf->Cell(34, 1, date_indo($data_surat->tgl_dibuat), 0, 1,);
+			$pdf->Cell(34, 1, date_indo(date('Y-m-d')), 0, 1,);
 			$pdf->Cell(189, 1, "Lampiran : " . $data_surat->jumlah_lampiran, 0, 1,);
 			$pdf->Cell(189, 1, "Hal           : " . $data_surat->hal_surat, 0, 1,);
 
@@ -354,7 +354,7 @@ class Root extends CI_Controller
 			$pdf->SetFont('times', '', 11);
 			//Cell($w, $h=0, $txt='', $border=0, $ln=0, $align='', $fill=0, $link='', $stretch=0, $ignore_min_height=false, $calign='T', $valign='M')
 			$pdf->Cell(155, 1, "Nomor     : " . $data_surat->no_surat, 0, 0,);
-			$pdf->Cell(34, 1, date_indo($data_surat->tgl_dibuat), 0, 1,);
+			$pdf->Cell(34, 1, date_indo(date('Y-m-d')), 0, 1,);
 			$pdf->Cell(189, 1, "Lampiran : " . $data_surat->jumlah_lampiran, 0, 1,);
 			$pdf->Cell(189, 1, "Hal           : " . $data_surat->hal_surat, 0, 1,);
 
