@@ -78,6 +78,10 @@ class Root extends CI_Controller
 	{
 		$data['mahasiswa'] = $this->Root_model->getMahasiswaById($nim);
 		$data['unit'] = ['Biro Perencanaan dan Keuangan', 'Biro Hukum, Organisasi, Kerja Sama dan Hubungan Masyarakat', 'Biro SDM dan Umum', 'Direktorat Deposit dan Pengembangan Koleksi Perpustakaan', 'Pusat Bibliografi dan Pengolahan Bahan Perpustakaan', 'Pusat Preservasi dan Alih Media Bahan Perpustakaan', 'Pusat Jasa Informasi Perpustakaan dan Pengelolaan Naskah Nusantara', 'Direktorat Standarisasi dan Akreditasi', 'Pusat Pengembangan Perpustakaan Umum dan Khusus', 'Pusat Pengembangan Perpustakaan Sekolah/Madrasah dan Perguruan Tinggi', 'Pusat Analisis Perpustakaan dan Pengembangan Budaya Baca', 'Pusat Data dan Informasi', 'Pusat Pembinaan Pustakawan', 'Pusat Pendidikan dan Pelatihan', 'Inspektorat', 'Dan lain'];
+		$data['tembusan1'] = ['', 'Kepala Perpustakaan Nasional RI', 'Sekretaris Utama', 'Deputi Bidang Pengembangan Bahan Pustaka dan Jasa Informasi', 'Deputi Bidang Pengembangan Sumber Daya Perpustakaan'];
+		$data['tembusan2'] = ['', 'Kepala Perpustakaan Nasional RI', 'Sekretaris Utama', 'Deputi Bidang Pengembangan Bahan Pustaka dan Jasa Informasi', 'Deputi Bidang Pengembangan Sumber Daya Perpustakaan'];
+		$data['tembusan3'] = ['', 'Kepala Perpustakaan Nasional RI', 'Sekretaris Utama', 'Deputi Bidang Pengembangan Bahan Pustaka dan Jasa Informasi', 'Deputi Bidang Pengembangan Sumber Daya Perpustakaan'];
+		$data['tembusan4'] = ['', 'Kepala Perpustakaan Nasional RI', 'Sekretaris Utama', 'Deputi Bidang Pengembangan Bahan Pustaka dan Jasa Informasi', 'Deputi Bidang Pengembangan Sumber Daya Perpustakaan'];
 		$this->load->view('templates/header');
 		$this->load->view('templates/navbar');
 		$this->load->view('root/buatSurat', $data);
@@ -88,6 +92,10 @@ class Root extends CI_Controller
 	public function buatSuratPenelitian($id_penelitian)
 	{
 		$data['penelitian'] = $this->Root_model->getPenlitById($id_penelitian);
+		$data['tembusan1'] = ['', 'Kepala Perpustakaan Nasional RI', 'Sekretaris Utama', 'Deputi Bidang Pengembangan Bahan Pustaka dan Jasa Informasi', 'Deputi Bidang Pengembangan Sumber Daya Perpustakaan'];
+		$data['tembusan2'] = ['', 'Kepala Perpustakaan Nasional RI', 'Sekretaris Utama', 'Deputi Bidang Pengembangan Bahan Pustaka dan Jasa Informasi', 'Deputi Bidang Pengembangan Sumber Daya Perpustakaan'];
+		$data['tembusan3'] = ['', 'Kepala Perpustakaan Nasional RI', 'Sekretaris Utama', 'Deputi Bidang Pengembangan Bahan Pustaka dan Jasa Informasi', 'Deputi Bidang Pengembangan Sumber Daya Perpustakaan'];
+		$data['tembusan4'] = ['', 'Kepala Perpustakaan Nasional RI', 'Sekretaris Utama', 'Deputi Bidang Pengembangan Bahan Pustaka dan Jasa Informasi', 'Deputi Bidang Pengembangan Sumber Daya Perpustakaan'];
 		$this->load->view('templates/header');
 		$this->load->view('templates/navbar');
 		$this->load->view('root/buatSuratPenelitian', $data);
@@ -249,8 +257,50 @@ class Root extends CI_Controller
 
 			$pdf->Ln(7);
 			$pdf->Cell(189, 1, 'Tembusan :', 0, 1);
-			$pdf->Cell(189, 1, '1. Kepala Perpustakaan Nasional RI', 0, 1);
-			$pdf->Cell(189, 1, '2. Sekretaris Utama Perpustakaan Nasional RI', 0, 1);
+			if (!empty($data_surat->tembusan1)) {
+				$pdf->Cell(189, 1, '1. ' . $data_surat->tembusan1, 0, 1);
+			} else {
+			}
+
+			if (empty($data_surat->tembusan1)) {
+				$pdf->Cell(189, 1, '1. ' . $data_surat->tembusan5, 0, 1);
+			} else {
+			}
+
+			if (!empty($data_surat->tembusan2)) {
+				$pdf->Cell(189, 1, '2. ' . $data_surat->tembusan2, 0, 1);
+			} else {
+			}
+
+			if (!empty($data_surat->tembusan1) && empty($data_surat->tembusan2)) {
+				$pdf->Cell(189, 1, '2. ' . $data_surat->tembusan5, 0, 1);
+			} else {
+			}
+
+			if (!empty($data_surat->tembusan3)) {
+				$pdf->Cell(189, 1, '3. ' . $data_surat->tembusan3, 0, 1);
+			} else {
+			}
+
+			if (!empty($data_surat->tembusan2) && empty($data_surat->tembusan3)) {
+				$pdf->Cell(189, 1, '3. ' . $data_surat->tembusan5, 0, 1);
+			} else {
+			}
+
+			if (!empty($data_surat->tembusan4)) {
+				$pdf->Cell(189, 1, '4. ' . $data_surat->tembusan4, 0, 1);
+			} else {
+			}
+
+			if (!empty($data_surat->tembusan3) && empty($data_surat->tembusan4)) {
+				$pdf->Cell(189, 1, '4. ' . $data_surat->tembusan5, 0, 1);
+			} else {
+			}
+
+			if (!empty($data_surat->tembusan4) && !empty($data_surat->tembusan5)) {
+				$pdf->Cell(189, 1, '5. ' . $data_surat->tembusan5, 0, 1);
+			} else {
+			}
 
 
 			$pdf->Output('Surat_Jawaban_Magang_' . $data_surat->nama . '.pdf', 'I');
@@ -331,10 +381,50 @@ class Root extends CI_Controller
 
 			$pdf->Ln(7);
 			$pdf->Cell(189, 1, 'Tembusan :', 0, 1);
-			$pdf->Cell(189, 1, '1. Kepala Perpustakaan Nasional RI', 0, 1);
-			$pdf->Cell(189, 1, '2. Sekretaris Utama Perpustakaan Nasional RI', 0, 1);
-			$pdf->Cell(189, 1, '3. Deputi Bidang Pengembangan Bahan Pustaka dan Jasa Informasi', 0, 1);
-			$pdf->Cell(189, 1, '4. Deputi Bidang Pengembangan Sumber Daya Perpustakaan', 0, 1);
+			if (!empty($data_surat->tembusan1)) {
+				$pdf->Cell(189, 1, '1. ' . $data_surat->tembusan1, 0, 1);
+			} else {
+			}
+
+			if (empty($data_surat->tembusan1)) {
+				$pdf->Cell(189, 1, '1. ' . $data_surat->tembusan5, 0, 1);
+			} else {
+			}
+
+			if (!empty($data_surat->tembusan2)) {
+				$pdf->Cell(189, 1, '2. ' . $data_surat->tembusan2, 0, 1);
+			} else {
+			}
+
+			if (!empty($data_surat->tembusan1) && empty($data_surat->tembusan2)) {
+				$pdf->Cell(189, 1, '2. ' . $data_surat->tembusan5, 0, 1);
+			} else {
+			}
+
+			if (!empty($data_surat->tembusan3)) {
+				$pdf->Cell(189, 1, '3. ' . $data_surat->tembusan3, 0, 1);
+			} else {
+			}
+
+			if (!empty($data_surat->tembusan2) && empty($data_surat->tembusan3)) {
+				$pdf->Cell(189, 1, '3. ' . $data_surat->tembusan5, 0, 1);
+			} else {
+			}
+
+			if (!empty($data_surat->tembusan4)) {
+				$pdf->Cell(189, 1, '4. ' . $data_surat->tembusan4, 0, 1);
+			} else {
+			}
+
+			if (!empty($data_surat->tembusan3) && empty($data_surat->tembusan4)) {
+				$pdf->Cell(189, 1, '4. ' . $data_surat->tembusan5, 0, 1);
+			} else {
+			}
+
+			if (!empty($data_surat->tembusan4) && !empty($data_surat->tembusan5)) {
+				$pdf->Cell(189, 1, '5. ' . $data_surat->tembusan5, 0, 1);
+			} else {
+			}
 
 			$pdf->Output('Surat_Permohonan_Penelitian_' . $data_surat->nama . '.pdf', 'I');
 		}
@@ -414,10 +504,50 @@ class Root extends CI_Controller
 
 			$pdf->Ln(7);
 			$pdf->Cell(189, 1, 'Tembusan :', 0, 1);
-			$pdf->Cell(189, 1, '1. Kepala Perpustakaan Nasional RI', 0, 1);
-			$pdf->Cell(189, 1, '2. Sekretaris Utama Perpustakaan Nasional RI', 0, 1);
-			$pdf->Cell(189, 1, '3. Deputi Bidang Pengembangan Bahan Perpustakaan dan Jasa Informasi', 0, 1);
-			$pdf->Cell(189, 1, '4.	Deputi Bidang Pengembangan Sumber Daya Perpustakaan', 0, 1);
+			if (!empty($data_surat->tembusan1)) {
+				$pdf->Cell(189, 1, '1. ' . $data_surat->tembusan1, 0, 1);
+			} else {
+			}
+
+			if (empty($data_surat->tembusan1)) {
+				$pdf->Cell(189, 1, '1. ' . $data_surat->tembusan5, 0, 1);
+			} else {
+			}
+
+			if (!empty($data_surat->tembusan2)) {
+				$pdf->Cell(189, 1, '2. ' . $data_surat->tembusan2, 0, 1);
+			} else {
+			}
+
+			if (!empty($data_surat->tembusan1) && empty($data_surat->tembusan2)) {
+				$pdf->Cell(189, 1, '2. ' . $data_surat->tembusan5, 0, 1);
+			} else {
+			}
+
+			if (!empty($data_surat->tembusan3)) {
+				$pdf->Cell(189, 1, '3. ' . $data_surat->tembusan3, 0, 1);
+			} else {
+			}
+
+			if (!empty($data_surat->tembusan2) && empty($data_surat->tembusan3)) {
+				$pdf->Cell(189, 1, '3. ' . $data_surat->tembusan5, 0, 1);
+			} else {
+			}
+
+			if (!empty($data_surat->tembusan4)) {
+				$pdf->Cell(189, 1, '4. ' . $data_surat->tembusan4, 0, 1);
+			} else {
+			}
+
+			if (!empty($data_surat->tembusan3) && empty($data_surat->tembusan4)) {
+				$pdf->Cell(189, 1, '4. ' . $data_surat->tembusan5, 0, 1);
+			} else {
+			}
+
+			if (!empty($data_surat->tembusan4) && !empty($data_surat->tembusan5)) {
+				$pdf->Cell(189, 1, '5. ' . $data_surat->tembusan5, 0, 1);
+			} else {
+			}
 
 
 			$pdf->Output('Surat_Pengantar_Penelitian_' . $data_surat->nama . '.pdf', 'I');

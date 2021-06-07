@@ -70,6 +70,59 @@
 							<input type="number" name="nim3" class="form-control" id="nim3" value="<?= $mahasiswa['nim3']; ?>">
 						</div>
 
+						<div class="form-group">
+							<label for="tembusan1">Tembusan</label>
+							<select class="form-select" name="tembusan1" id="tembusan1">
+								<?php foreach ($tembusan1 as $tembusan1) : ?>
+									<?php if ($tembusan1 == $mahasiswa['tembusan1']) : ?>
+										<option value="<?= $tembusan1; ?>" selected><?= $tembusan1; ?></option>
+									<?php else : ?>
+										<option value="<?= $tembusan1; ?>"><?= $tembusan1; ?></option>
+									<?php endif; ?>
+								<?php endforeach; ?>
+							</select>
+						</div>
+
+						<div class="form-group">
+							<select class="form-select" name="tembusan2" id="tembusan2">
+								<?php foreach ($tembusan2 as $tembusan2) : ?>
+									<?php if ($tembusan2 == $mahasiswa['tembusan2']) : ?>
+										<option value="<?= $tembusan2; ?>" selected><?= $tembusan2; ?></option>
+									<?php else : ?>
+										<option value="<?= $tembusan2; ?>"><?= $tembusan2; ?></option>
+									<?php endif; ?>
+								<?php endforeach; ?>
+							</select>
+						</div>
+
+						<div class="form-group">
+							<select class="form-select" name="tembusan3" id="tembusan3">
+								<?php foreach ($tembusan3 as $tembusan3) : ?>
+									<?php if ($tembusan3 == $mahasiswa['tembusan3']) : ?>
+										<option value="<?= $tembusan3; ?>" selected><?= $tembusan3; ?></option>
+									<?php else : ?>
+										<option value="<?= $tembusan3; ?>"><?= $tembusan3; ?></option>
+									<?php endif; ?>
+								<?php endforeach; ?>
+							</select>
+						</div>
+
+						<div class="form-group">
+							<select class="form-select" name="tembusan4" id="tembusan4">
+								<?php foreach ($tembusan4 as $tembusan4) : ?>
+									<?php if ($tembusan4 == $mahasiswa['tembusan4']) : ?>
+										<option value="<?= $tembusan4; ?>" selected><?= $tembusan4; ?></option>
+									<?php else : ?>
+										<option value="<?= $tembusan4; ?>"><?= $tembusan4; ?></option>
+									<?php endif; ?>
+								<?php endforeach; ?>
+							</select>
+						</div>
+
+						<div class="form-group">
+							<input type="text" name="tembusan5" class="form-control" id="tembusan5" value="<?= $mahasiswa['tembusan5']; ?>">
+						</div>
+
 						<a href="<?= base_url("root/index/"); ?>" class="btn btn-secondary mt-3">Kembali</a>
 						<button type="submit" name="ubah" class="btn btn-primary mt-3 float-end">Simpan</button>
 					</form>

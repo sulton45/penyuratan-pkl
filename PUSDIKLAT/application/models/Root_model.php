@@ -97,6 +97,11 @@ class Root_model extends CI_Model
 		$nim2 = $this->input->post('nim2', true);
 		$nama3 = $this->input->post('nama3', true);
 		$nim3 = $this->input->post('nim3', true);
+		$tembusan1 = $this->input->post('tembusan1', true);
+		$tembusan2 = $this->input->post('tembusan2', true);
+		$tembusan3 = $this->input->post('tembusan3', true);
+		$tembusan4 = $this->input->post('tembusan4', true);
+		$tembusan5 = $this->input->post('tembusan5', true);
 
 
 		$data = array(
@@ -116,6 +121,11 @@ class Root_model extends CI_Model
 			'nim2' => $nim2,
 			'nama3' => $nama3,
 			'nim3' => $nim3,
+			'tembusan1' => $tembusan1,
+			'tembusan2' => $tembusan2,
+			'tembusan3' => $tembusan3,
+			'tembusan4' => $tembusan4,
+			'tembusan5' => $tembusan5,
 		);
 		$this->db->where('nim', $nim);
 		$this->db->update('mahasiswa', $data);
@@ -138,6 +148,11 @@ class Root_model extends CI_Model
 		$tglsurat_pemohon = $this->input->post('tglsurat_pemohon', true);
 		$tujuan_penelitian = $this->input->post('tujuan_penelitian', true);
 		$metode_ambil_data = $this->input->post('metode_ambil_data', true);
+		$tembusan1 = $this->input->post('tembusan1', true);
+		$tembusan2 = $this->input->post('tembusan2', true);
+		$tembusan3 = $this->input->post('tembusan3', true);
+		$tembusan4 = $this->input->post('tembusan4', true);
+		$tembusan5 = $this->input->post('tembusan5', true);
 
 
 		$data = array(
@@ -153,6 +168,11 @@ class Root_model extends CI_Model
 			'tglsurat_pemohon' => $tglsurat_pemohon,
 			'tujuan_penelitian' => $tujuan_penelitian,
 			'metode_ambil_data' => $metode_ambil_data,
+			'tembusan1' => $tembusan1,
+			'tembusan2' => $tembusan2,
+			'tembusan3' => $tembusan3,
+			'tembusan4' => $tembusan4,
+			'tembusan5' => $tembusan5,
 		);
 		$this->db->where('id_penelitian', $id_penelitian);
 		$this->db->update('penelitian', $data);
